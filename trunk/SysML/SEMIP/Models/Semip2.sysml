@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:sysML="http://www.topcased.org/2.0/sysML" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="Semip2">
   <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="Semip2">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_LlHsAFYuEeCzKLVR2JRirg" annotatedElement="_MoX4ElTWEeCqmqCszyTedQ">
+      <body>A file containing consumption information would be annotated with &quot;Fuel Consumption&quot; in the &quot;fuels&quot; column. There is no longer a separate consumption column pair. This is consistent with the notion that consumption is information about fuels.</body>
+    </ownedComment>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_nBTQiVTSEeCqmqCszyTedQ" name="Fire Type">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nBTQilTSEeCqmqCszyTedQ" name="Wildfire"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nBTQi1TSEeCqmqCszyTedQ" name="Prescribed Burn"/>
@@ -58,9 +61,11 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AhXqAFTWEeCqmqCszyTedQ"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_8pDxElWYEeCRlq0hGp-4nA" name="fireInfo" type="_bNGXoFWYEeCRlq0hGp-4nA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_HUe8klTWEeCqmqCszyTedQ" name="fireInformation" type="_exYBlVWWEeCRlq0hGp-4nA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HUe8klTWEeCqmqCszyTedQ" name="fire" type="_exYBlVWWEeCRlq0hGp-4nA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ztwC8lWYEeCRlq0hGp-4nA" name="fuelInfo" type="_bNGXoFWYEeCRlq0hGp-4nA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_MoX4ElTWEeCqmqCszyTedQ" name="fuels" type="_dnpj8FWXEeCRlq0hGp-4nA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MoX4ElTWEeCqmqCszyTedQ" name="fuels" type="_dnpj8FWXEeCRlq0hGp-4nA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JnTJ4FYtEeCzKLVR2JRirg" value="*"/>
+      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_YoU4UFWZEeCRlq0hGp-4nA" name="emissionsInfo" type="_bNGXoFWYEeCRlq0hGp-4nA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_aSoBklTWEeCqmqCszyTedQ" name="emissions" type="_4lop0FWWEeCRlq0hGp-4nA">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EkH7cFWfEeCRlq0hGp-4nA" value="*"/>
@@ -77,7 +82,6 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_lymE0lTWEeCqmqCszyTedQ" name="fireType" type="_nBTQiVTSEeCqmqCszyTedQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_pdu50lTWEeCqmqCszyTedQ" name="fuelGroup" type="_nBTQpVTSEeCqmqCszyTedQ"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_TdE7clWZEeCRlq0hGp-4nA" name="consumptionInfo" type="_bNGXoFWYEeCRlq0hGp-4nA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_x-OUMlTWEeCqmqCszyTedQ" name="fileFormatRef" type="_vz2OslTTEeCqmqCszyTedQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_1NzOklTWEeCqmqCszyTedQ" name="description" type="_e2e5MFTUEeCqmqCszyTedQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_6dXqwlTWEeCqmqCszyTedQ" name="technical" type="_pLpWMFTUEeCqmqCszyTedQ"/>
@@ -110,6 +114,8 @@
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_zAmT8lWWEeCRlq0hGp-4nA" name="Location &amp; Size"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_0bVzolWWEeCRlq0hGp-4nA" name="Perimeters"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_1-JDIlWWEeCRlq0hGp-4nA" name="Growth Rate"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_gkyOwlYsEeCzKLVR2JRirg" name="Burn Scar"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_hffjglYsEeCzKLVR2JRirg" name="Thermal Anomalies"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_4lop0FWWEeCRlq0hGp-4nA" name="Emissions Measurand">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nBTQnVTSEeCqmqCszyTedQ" name="PM 2.5"/>
@@ -124,6 +130,10 @@
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_dnpj8FWXEeCRlq0hGp-4nA" name="Fuel Measurand">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_fZMaElWXEeCRlq0hGp-4nA" name="Fuel Moisture"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_g5Th8lWXEeCRlq0hGp-4nA" name="Canopy Fuels"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_lzBOMlYsEeCzKLVR2JRirg" name="Fuel Loading"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_muCE8lYsEeCzKLVR2JRirg" name="Fuel Consumption"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_0cxF0lYsEeCzKLVR2JRirg" name="Fuel Type"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_2BMtAlYsEeCzKLVR2JRirg" name="Vegetation Type"/>
     </packagedElement>
     <packagedElement xmi:type="uml:DataType" xmi:id="_bNGXoFWYEeCRlq0hGp-4nA" name="DataInfoType">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_eqiH0FWYEeCRlq0hGp-4nA" name="source" type="_lG7q4FWVEeCRlq0hGp-4nA"/>
@@ -139,12 +149,14 @@
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nBTQmlTSEeCqmqCszyTedQ" name="Transport"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nBTQm1TSEeCqmqCszyTedQ" name="Deposition"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nBTQnFTSEeCqmqCszyTedQ" name="Chemistry"/>
-      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nBTQn1TSEeCqmqCszyTedQ" name="Visibility"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nBTQn1TSEeCqmqCszyTedQ" name="Optical"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_omfL4FWeEeCRlq0hGp-4nA" name="Meteorology Measurand">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tfHHslWeEeCRlq0hGp-4nA" name="RH"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_uc9QAlWeEeCRlq0hGp-4nA" name="Temperature"/>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_vdeR0lWeEeCRlq0hGp-4nA" name="Wind"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_cFCF8FYsEeCzKLVR2JRirg" name="Solar"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_c4cf4lYsEeCzKLVR2JRirg" name="Other"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_vz2OsFTTEeCqmqCszyTedQ" name="Boolean"/>
