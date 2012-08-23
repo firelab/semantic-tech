@@ -2,6 +2,7 @@
 import urllib, urlparse, re, BeautifulSoup, codecs
 from terms import Term, TermSet
 from skos import FragmentConceptFactory, TermsetConceptSchemeFactory
+from ditamodel import TermsetGlossGroupFactory, DefaultGlossEntryFactory
 
 labelproc = re.compile(r'^(?P<label>[^()]+[A-Za-z0-9])\s*(\((?P<acronym>.+)\))?$')
 htmlcondense = re.compile(r'\s+')
@@ -15,6 +16,8 @@ def nextSiblingTag(tag) :
 	while (tag != None and type(tag) != BeautifulSoup.Tag) : 
 		tag = tag.nextSibling
 	return tag
+	
+	
 
 def parseEntry(tag) :
 	if nextSiblingTag(tag) == None or tag['class'] != u'term' or len(tag.contents)==0 :
@@ -27,6 +30,7 @@ def parseEntry(tag) :
 	englishDefs = []
 	refs = [] 
 	syns = [] 
+	acronym = None
 
 	# If the next tag is another paragraph, its contents are the English 
 	# representation of the term.
@@ -64,19 +68,23 @@ def parseEntry(tag) :
 	while (tag != None) and (tag.name == u'p') and (tag['class'] == u'reference') : 
 		if tag.em.string.startswith(u'synonym') or \
 		   tag.em.string.startswith(u'see:') : 
-			for refTag in tag.contents[1:len(tag.contents)-1] : 
+			for refTag in tag.contents :
 				if (type(refTag) == BeautifulSoup.Tag and refTag.name == u'a') : 
 					refurl =  urlparse.urlparse(refTag['href'])
 					syns.append(refurl.fragment)
 		if tag.em.string.startswith(u'see also') : 
-			for refTag in tag.contents[1:len(tag.contents)-1] : 
+			for refTag in tag.contents : 
 				if (type(refTag) == BeautifulSoup.Tag and refTag.name == u'a') : 
 					refurl =  urlparse.urlparse(refTag['href'])
 					refs.append(refurl.fragment)
 		tag = nextSiblingTag(tag)
 		
+	if acronym == None : 
+		term = Term(key, englishLabel, englishDefs, refs, syns)
+	else : 
+		term = Term(key, englishLabel, englishDefs, refs, syns, [acronym]) 
 
-	return (tag, Term(key, englishLabel, englishDefs, refs, syns))
+	return (tag, term)
 
 
 	
@@ -86,13 +94,18 @@ def parsePage(url, terms=None) :
 	if terms == None : 
 		terms = TermSet()
 
-	tag = b.find('p', 'term')
-	while tag != None : 
-		tag, term = parseEntry(tag)
-		if (term != None) : 
-			terms.addTerm(term)
-		while (tag != None) and not ((tag.name == u'p') and (tag['class'] == u'term')) :
-			tag = nextSiblingTag(tag)
+	divtag = b.find('div')
+	while divtag != None : 
+		tag = divtag.find('p', 'term')
+		while tag != None : 
+			dummy, term = parseEntry(tag)
+			if (term != None) : 
+				terms.addTerm(term)
+			if tag != None : 
+				tag = tag.findNextSibling('p', {'class':'term'})
+#			while (tag != None) and not ((tag.name == u'p') and (tag['class'] == u'term')) :
+#				tag = nextSiblingTag(tag)
+		divtag = divtag.findNextSibling('div')
 
 	return terms
 
@@ -109,10 +122,15 @@ def parseGlossary(baseUrl) :
 		terms = parsePage(url, terms)
 	return terms
 	
-def convertGlossary(baseUrl, terms) : 
+def convertGlossaryToSKOS(baseUrl, terms) : 
 	cf = FragmentConceptFactory(baseUrl)
 	csf = TermsetConceptSchemeFactory(cf)
 	return csf.newConceptScheme(terms, baseUrl)
+
+def convertGlossaryToDita(baseUrl, name, terms) : 
+	cf = DefaultGlossEntryFactory()
+	csf = TermsetGlossGroupFactory(cf)
+	return csf.newGlossGroup(terms, baseUrl, name)
 
 
 def termsout(file, terms) : 
@@ -150,5 +168,14 @@ def rdfout(file, cs) :
 	f.write(u'</rdf:RDF>\n')
 	f.close()
 
+def ditaout(file, gg) : 
+	f = codecs.open(file, 'w', 'utf-8')
+
+	# write the header
+	f.write(u'<?xml version="1.0" encoding="UTF-8"?>\n')
+	f.write(u'<!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">\n') 
+
+	f.write(gg.ustr())
+	f.close()
 
 

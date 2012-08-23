@@ -1,10 +1,19 @@
 class Term (object) : 
-	def __init__(self,key, label, defs, refs, syns) : 
+	def __init__(self, key, label, defs, refs, syns, acronyms=None, abbrev=None, shortForms=None) : 
 		self._key = key
 		self._englishLabel = label
 		self._englishDefs = defs
 		self._references = refs
 		self._synonyms = syns
+		self._abbrev = [] 
+		self._acronyms = []
+		self._shortForms = [] 
+		if abbrev != None : 
+			self._abbrev = abbrev
+		if acronyms != None : 
+			self._acronyms = acronyms
+		if shortForms != None :
+			self._shortForms = shortForms
 
 	def getKey(self) :
 		return self._key
@@ -16,17 +25,13 @@ class Term (object) :
 		return self._references
 	def getSynonyms(self) : 
 		return self._synonyms
+	def getAbbreviations(self) : 
+		return self._abbrev
+	def getAcronyms(self) : 
+		return self._acronyms
+	def getShortForms(self) : 
+		return self._shortForms
 
-	def getSkos(self) : 
-		data =  [ u'<skos:Concept rdf:about="http://www.nwcg.gov/pms/pubs/glossary#%s" >' % self._key,
-			u'\t<skos:prefLabel xml:lang="en">%s</skos:prefLabel>' % self._englishLabel ] 
-		for edef in self._englishDefs : 
-			data.append(u'\t<skos:scopeNote xml:lang="en">%s</skos:scopeNote>' % edef )
-		if (self._references != None and len(self._references) > 0) : 
-			for ref in self._references : 
-				data.append(u'\t<skos:related rdf:resource="http://www.nwcg.gov/pms/pubs/glossary#%s"/>' % ref)
-		data.append(u'</skos:Concept>')
-		return '\n'.join(data)
 
 class TermSet (object) : 
 	def __init__(self) : 
