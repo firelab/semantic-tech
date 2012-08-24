@@ -94,12 +94,6 @@
 			<link href="#Available_Resources">
 				<linktext>Available Resources</linktext>
 			</link>
-			<link href="#Allocated_Resources">
-				<linktext>Allocated Resources</linktext>
-			</link>
-			<link href="#Available_Resources">
-				<linktext>Available Resources</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Activity_Fuels">
@@ -201,9 +195,6 @@
 			intensity which is normally burning with the wind and/or up slope.
 			Also called: forward fire, or a run.</glossdef>
 		<related-links>
-			<link href="#Head_Fire" role="other" otherrole="synonym">
-				<linktext>Head Fire</linktext>
-			</link>
 			<link href="#Head_Fire" role="other" otherrole="synonym">
 				<linktext>Head Fire</linktext>
 			</link>
@@ -651,9 +642,6 @@
 			<link href="#Firefinder_Map">
 				<linktext>Firefinder Map</linktext>
 			</link>
-			<link href="#Firefinder_Map">
-				<linktext>Firefinder Map</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="All_Hazard_Incident">
@@ -708,9 +696,6 @@
 			<link href="#Off-road_Vehicle" role="other" otherrole="synonym">
 				<linktext>Off-road Vehicle</linktext>
 			</link>
-			<link href="#Off-road_Vehicle" role="other" otherrole="synonym">
-				<linktext>Off-road Vehicle</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Alligatoring">
@@ -728,9 +713,6 @@
 		<glossdef>Resources dispatched to an incident, that have not yet checked
 			in.</glossdef>
 		<related-links>
-			<link href="#Active_Resources">
-				<linktext>Active Resources</linktext>
-			</link>
 			<link href="#Active_Resources">
 				<linktext>Active Resources</linktext>
 			</link>
@@ -1269,9 +1251,6 @@
 			<link href="#Allocated_Resources">
 				<linktext>Allocated Resources</linktext>
 			</link>
-			<link href="#Active_Resources">
-				<linktext>Active Resources</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Average_Annual_Precipitation">
@@ -1368,9 +1347,6 @@
 			</glossAlt>
 		</glossBody>
 		<related-links>
-			<link href="#Drip_Torch">
-				<linktext>Drip Torch</linktext>
-			</link>
 			<link href="#Flame_Thrower">
 				<linktext>Flame Thrower</linktext>
 			</link>
@@ -2253,9 +2229,6 @@
 			<link href="#Emergency_Firefighter">
 				<linktext>Emergency Firefighter</linktext>
 			</link>
-			<link href="#Emergency_Firefighter">
-				<linktext>Emergency Firefighter</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Category_Day">
@@ -2366,9 +2339,6 @@
 			<link href="#Live_Line" role="other" otherrole="synonym">
 				<linktext>Live Line</linktext>
 			</link>
-			<link href="#Live_Line" role="other" otherrole="synonym">
-				<linktext>Live Line</linktext>
-			</link>
 			<link href="#Live_Reel">
 				<linktext>Live Reel</linktext>
 			</link>
@@ -2461,13 +2431,6 @@
 			strong filming action, but incapable of efficient wetting of Class A
 			fuels.</glossdef>
 	</glossentry>
-	<glossentry id="Class_II_Areas_Air_Quality">
-		<glossterm>Class II Areas (Air Quality)</glossterm>
-		<glossdef>All areas of the country not designated Class I, including
-			everything from non-Class I areas to urban areas. A greater amount
-			of air pollution can be added to these areas than Class
-			I.</glossdef>
-	</glossentry>
 	<glossentry id="Class_I_Areas_Air_Quality">
 		<glossterm>Class I Areas (Air Quality)</glossterm>
 		<glossdef>Geographic areas designed by the Clean Air Act subject to the
@@ -2476,6 +2439,13 @@
 			nation memorial parks over 5,000 acres, National Parks exceeding
 			6,000 acres, international parks, as well as other designated
 			lands.</glossdef>
+	</glossentry>
+	<glossentry id="Class_II_Areas_Air_Quality">
+		<glossterm>Class II Areas (Air Quality)</glossterm>
+		<glossdef>All areas of the country not designated Class I, including
+			everything from non-Class I areas to urban areas. A greater amount
+			of air pollution can be added to these areas than Class
+			I.</glossdef>
 	</glossentry>
 	<glossentry id="Class_of_Fire">
 		<glossterm>Class of Fire</glossterm>
@@ -3685,9 +3655,6 @@
 			<link href="#Fire_Detection" role="other" otherrole="synonym">
 				<linktext>Fire Detection</linktext>
 			</link>
-			<link href="#Fire_Detection" role="other" otherrole="synonym">
-				<linktext>Fire Detection</linktext>
-			</link>
 			<link href="#Discovery">
 				<linktext>Discovery</linktext>
 			</link>
@@ -4116,9 +4083,6 @@
 			<link href="#Backfire_Torch">
 				<linktext>Backfire Torch</linktext>
 			</link>
-			<link href="#Backfire_Torch">
-				<linktext>Backfire Torch</linktext>
-			</link>
 			<link href="#Flame_Thrower">
 				<linktext>Flame Thrower</linktext>
 			</link>
@@ -4169,9 +4133,6 @@
 			the relative coverage level of the fire retardant on fuels within
 			the pattern.</glossdef>
 		<related-links>
-			<link href="#Pattern" role="other" otherrole="synonym">
-				<linktext>Pattern</linktext>
-			</link>
 			<link href="#Pattern" role="other" otherrole="synonym">
 				<linktext>Pattern</linktext>
 			</link>
@@ -4398,6 +4359,19 @@
 			suppression. NOTE: Generally divided chronologically into discovery
 			time, report time, getaway time, travel time, attack time, control
 			time, mop-up time, and patrol time.</glossdef>
+	</glossentry>
+	<glossentry id="eLearning">
+		<glossterm>eLearning</glossterm>
+		<glossdef>Conceptually represents the optimum integration of modern
+			educational methods and professional staff development training with
+			state of the art technology. The primary goal is enhancing
+			on-the-job performance, motivation, and learning
+			performance.</glossdef>
+		<related-links>
+			<link href="#Distance_Learning">
+				<linktext>Distance Learning</linktext>
+			</link>
+		</related-links>
 	</glossentry>
 	<glossentry id="Elevation_Loss">
 		<glossterm>Elevation Loss</glossterm>
@@ -5426,9 +5400,6 @@
 			<link href="#Detection" role="other" otherrole="synonym">
 				<linktext>Detection</linktext>
 			</link>
-			<link href="#Detection" role="other" otherrole="synonym">
-				<linktext>Detection</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Fire_Discovery">
@@ -5755,9 +5726,6 @@
 			and fuel loadings.</glossdef>
 		<related-links>
 			<link href="#Condition_Class" role="other" otherrole="synonym">
-				<linktext>Condition Class</linktext>
-			</link>
-			<link href="#Condition_Class">
 				<linktext>Condition Class</linktext>
 			</link>
 		</related-links>
@@ -6257,12 +6225,6 @@
 			<link href="#Terra_Torch" role="other" otherrole="synonym">
 				<linktext>Terra Torch ®</linktext>
 			</link>
-			<link href="#Terra_Torch" role="other" otherrole="synonym">
-				<linktext>Terra Torch ®</linktext>
-			</link>
-			<link href="#Backfire_Torch">
-				<linktext>Backfire Torch</linktext>
-			</link>
 			<link href="#Backfire_Torch">
 				<linktext>Backfire Torch</linktext>
 			</link>
@@ -6327,9 +6289,6 @@
 			of fire set into the wind which burn outward at right angles to the
 			wind.</glossdef>
 		<related-links>
-			<link href="#Lateral_Fire" role="other" otherrole="synonym">
-				<linktext>Lateral Fire</linktext>
-			</link>
 			<link href="#Lateral_Fire" role="other" otherrole="synonym">
 				<linktext>Lateral Fire</linktext>
 			</link>
@@ -7525,9 +7484,6 @@
 			<link href="#Advancing_Fire" role="other" otherrole="synonym">
 				<linktext>Advancing Fire</linktext>
 			</link>
-			<link href="#Advancing_Fire" role="other" otherrole="synonym">
-				<linktext>Advancing Fire</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Head_Pressure">
@@ -7675,7 +7631,10 @@
 			to the Air Support Group Supervisor.</glossdef>
 		<glossBody>
 			<glossAlt>
-				<glossAcronym>HEB1 or HEB2</glossAcronym>
+				<glossAcronym>HEB1</glossAcronym>
+			</glossAlt>
+			<glossAlt>
+				<glossAcronym>HEB2</glossAcronym>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -7702,9 +7661,6 @@
 		<glossdef>An aircraft that depends principally on the lift generated by
 			one or more rotors for its support in flight.</glossdef>
 		<related-links>
-			<link href="#Rotorcraft" role="other" otherrole="synonym">
-				<linktext>Rotorcraft</linktext>
-			</link>
 			<link href="#Rotorcraft" role="other" otherrole="synonym">
 				<linktext>Rotorcraft</linktext>
 			</link>
@@ -8150,9 +8106,6 @@
 			conditions that provides the opportunity for fire to burn from
 			wildland vegetation to the home/structure ignition zone.</glossdef>
 		<related-links>
-			<link href="#Wildland_Urban_Interface">
-				<linktext>Wildland Urban Interface</linktext>
-			</link>
 			<link href="#Wildland_Urban_Interface">
 				<linktext>Wildland Urban Interface</linktext>
 			</link>
@@ -9120,9 +9073,6 @@
 			<link href="#Flank_Fire" role="other" otherrole="synonym">
 				<linktext>Flank Fire</linktext>
 			</link>
-			<link href="#Flank_Fire" role="other" otherrole="synonym">
-				<linktext>Flank Fire</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Leach">
@@ -9465,9 +9415,6 @@
 		<glossdef>Hose line filled with water under pressure and ready to
 			use.</glossdef>
 		<related-links>
-			<link href="#Charged_Line" role="other" otherrole="synonym">
-				<linktext>Charged Line</linktext>
-			</link>
 			<link href="#Charged_Line" role="other" otherrole="synonym">
 				<linktext>Charged Line</linktext>
 			</link>
@@ -10899,9 +10846,6 @@
 			<link href="#All_Terrain_Vehicle" role="other" otherrole="synonym">
 				<linktext>All Terrain Vehicle</linktext>
 			</link>
-			<link href="#All_Terrain_Vehicle" role="other" otherrole="synonym">
-				<linktext>All Terrain Vehicle</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Off-site_Colonizers">
@@ -11089,7 +11033,10 @@
 			deputies assigned.</glossdef>
 		<glossBody>
 			<glossAlt>
-				<glossAcronym>OSC1 or OSC2</glossAcronym>
+				<glossAcronym>OSC1</glossAcronym>
+			</glossAlt>
+			<glossAlt>
+				<glossAcronym>OCS2</glossAcronym>
 			</glossAlt>
 		</glossBody>
 		<related-links>
@@ -11425,9 +11372,6 @@
 			the relative coverage level of the fire retardant on fuel within the
 			pattern.</glossdef>
 		<related-links>
-			<link href="#Drop_Pattern" role="other" otherrole="synonym">
-				<linktext>Drop Pattern</linktext>
-			</link>
 			<link href="#Drop_Pattern" role="other" otherrole="synonym">
 				<linktext>Drop Pattern</linktext>
 			</link>
@@ -12284,7 +12228,13 @@
 			assigned.</glossdef>
 		<glossBody>
 			<glossAlt>
-				<glossAcronym>PIO1, PIO2, PIOF</glossAcronym>
+				<glossAcronym>PIO1 </glossAcronym>
+			</glossAlt>
+			<glossAlt>
+				<glossAcronym>PIO2</glossAcronym>
+			</glossAlt>
+			<glossAlt>
+				<glossAcronym>PIOF</glossAcronym>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -12875,14 +12825,8 @@
 			<link href="#Allocated_Resources">
 				<linktext>Allocated Resources</linktext>
 			</link>
-			<link href="#Active_Resources">
-				<linktext>Active Resources</linktext>
-			</link>
 			<link href="#Available_Resources">
 				<linktext>Available Resources</linktext>
-			</link>
-			<link href="#Values_To_Be_Protected">
-				<linktext>Values To Be Protected</linktext>
 			</link>
 			<link href="#Values_To_Be_Protected">
 				<linktext>Values To Be Protected</linktext>
@@ -12901,14 +12845,8 @@
 			<link href="#Allocated_Resources">
 				<linktext>Allocated Resources</linktext>
 			</link>
-			<link href="#Active_Resources">
-				<linktext>Active Resources</linktext>
-			</link>
 			<link href="#Available_Resources">
 				<linktext>Available Resources</linktext>
-			</link>
-			<link href="#Values_To_Be_Protected">
-				<linktext>Values To Be Protected</linktext>
 			</link>
 			<link href="#Values_To_Be_Protected">
 				<linktext>Values To Be Protected</linktext>
@@ -12945,9 +12883,6 @@
 			only; not recommended for use on structure fires or fires involving
 			most hazardous materials.</glossdef>
 		<related-links>
-			<link href="#Self-Contained_Breathing_Apparatus">
-				<linktext>Self-Contained Breathing Apparatus</linktext>
-			</link>
 			<link href="#Self-Contained_Breathing_Apparatus">
 				<linktext>Self-Contained Breathing Apparatus</linktext>
 			</link>
@@ -13183,9 +13118,6 @@
 			one or more rotors for its support in flight. Also called rotary
 			wing.</glossdef>
 		<related-links>
-			<link href="#Helicopter" role="other" otherrole="synonym">
-				<linktext>Helicopter</linktext>
-			</link>
 			<link href="#Helicopter" role="other" otherrole="synonym">
 				<linktext>Helicopter</linktext>
 			</link>
@@ -13550,9 +13482,6 @@
 			<link href="#Respirator">
 				<linktext>Respirator</linktext>
 			</link>
-			<link href="#Respirator">
-				<linktext>Respirator</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Separation">
@@ -13874,9 +13803,6 @@
 			and by communication with others. This information is integrated to
 			create an individual's perception of a given situation.</glossdef>
 		<glossBody>
-			<glossAlt>
-				<glossAcronym>SA</glossAcronym>
-			</glossAlt>
 			<glossAlt>
 				<glossSynonym>Situational Awareness</glossSynonym>
 			</glossAlt>
@@ -14531,10 +14457,6 @@
 				otherrole="synonym">
 				<linktext>Standard Operational Procedure</linktext>
 			</link>
-			<link href="#Standard_Operational_Procedure" role="other"
-				otherrole="synonym">
-				<linktext>Standard Operational Procedure</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Standard_Operational_Procedure">
@@ -14550,10 +14472,6 @@
 			</glossAlt>
 		</glossBody>
 		<related-links>
-			<link href="#Standard_Operating_Procedure" role="other"
-				otherrole="synonym">
-				<linktext>Standard Operating Procedure</linktext>
-			</link>
 			<link href="#Standard_Operating_Procedure" role="other"
 				otherrole="synonym">
 				<linktext>Standard Operating Procedure</linktext>
@@ -15398,9 +15316,6 @@
 			facilitate rapid ignition during burn out operations on a wild fire
 			or during a prescribed fire operation.</glossdef>
 		<related-links>
-			<link href="#Flame_Thrower" role="other" otherrole="synonym">
-				<linktext>Flame Thrower</linktext>
-			</link>
 			<link href="#Flame_Thrower" role="other" otherrole="synonym">
 				<linktext>Flame Thrower</linktext>
 			</link>
@@ -16690,10 +16605,10 @@
 			vegetative fuels.</glossdef>
 		<glossBody>
 			<glossAlt>
-				<glossAcronym>WUI</glossAcronym>
+				<glossSynonym>Urban Interface</glossSynonym>
 			</glossAlt>
 			<glossAlt>
-				<glossSynonym>Urban Interface</glossSynonym>
+				<glossAcronym>WUI</glossAcronym>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -16894,17 +16809,5 @@
 			administrative and climatological areas, usually nearly the size of
 			an individual forest or district.</glossdef>
 	</glossentry>
-	<glossentry id="eLearning">
-		<glossterm>eLearning</glossterm>
-		<glossdef>Conceptually represents the optimum integration of modern
-			educational methods and professional staff development training with
-			state of the art technology. The primary goal is enhancing
-			on-the-job performance, motivation, and learning
-			performance.</glossdef>
-		<related-links>
-			<link href="#Distance_Learning">
-				<linktext>Distance Learning</linktext>
-			</link>
-		</related-links>
-	</glossentry>
+	
 </glossgroup>
