@@ -13,6 +13,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Six Minutes for Safety</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -2216,13 +2217,14 @@
 			Emergency Workers.</glossdef>
 		<glossBody>
 			<glossAlt>
-				<glossSynonym>Administratively Determined</glossSynonym>
-			</glossAlt>
-			<glossAlt>
 				<glossAcronym>AD</glossAcronym>
 			</glossAlt>
 			<glossAlt>
+				<glossSynonym>Administratively Determined</glossSynonym>
+			</glossAlt>
+			<glossAlt>
 				<glossSynonym>Emergency Worker</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 		<related-links>
@@ -4400,9 +4402,6 @@
 			<link href="#Casual">
 				<linktext>Casual</linktext>
 			</link>
-			<link href="#Casual">
-				<linktext>Casual</linktext>
-			</link>
 		</related-links>
 	</glossentry>
 	<glossentry id="Emergency_Locator_Transmitter">
@@ -5524,6 +5523,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Fire Return Interval</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -5839,6 +5839,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Severity</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 		<related-links>
@@ -7900,6 +7901,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Holding Forces</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -8513,6 +8515,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Red Card</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -9402,6 +9405,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Living Fuels</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -9694,6 +9698,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Trigger Points</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -9849,6 +9854,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Fire Occurrence</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -11306,6 +11312,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Particulates</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -14054,6 +14061,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Smoldering</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -14956,6 +14964,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Suppress a Fire</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -15669,10 +15678,6 @@
 		<glossdef>A small ditch often constructed below a fire on sloping ground
 			(undercut or underslung line) to catch rolling material.</glossdef>
 	</glossentry>
-	<glossentry id="Trial">
-		<glossterm>Trial</glossterm>
-		<glossdef>None</glossdef>
-	</glossentry>
 	<glossentry id="Trough">
 		<glossterm>Trough</glossterm>
 		<glossdef>An elongated area of relatively low atmospheric pressure,
@@ -15750,6 +15755,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Unacceptable Fire Risk</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -15934,6 +15940,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Values-At-Risk</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -16569,11 +16576,15 @@
 			<glossAlt>
 				<glossAcronym>WFSA</glossAcronym>
 			</glossAlt>
-			<glossAlt>
+			<glossAlt id="Escaped_Fire_SA">
 				<glossSynonym>Escaped Fire Situation Analysis</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 			<glossAlt>
 				<glossAcronym>EFSA</glossAcronym>
+				<glossStatus value="altonly"/>
+				<glossAlternateFor
+					href="#Wildland_Fire_Situation_Analysis/Escaped_Fire_SA"/>
 			</glossAlt>
 		</glossBody>
 	</glossentry>
@@ -16587,6 +16598,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Prescribed Natural Fire</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 		</glossBody>
 		<related-links>
@@ -16606,6 +16618,7 @@
 		<glossBody>
 			<glossAlt>
 				<glossSynonym>Urban Interface</glossSynonym>
+				<glossStatus value="altonly"/>
 			</glossAlt>
 			<glossAlt>
 				<glossAcronym>WUI</glossAcronym>
