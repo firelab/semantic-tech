@@ -3,7 +3,7 @@
 <glossgroup id="nwcg" xml:lang="en">
 <title>nwcg</title>
 <prolog><resourceid id="http://firelab.org/cv/nwcg"/></prolog>
-<glossentry id="6_Minutes_for_Safety">
+<glossentry id="Six_Minutes_for_Safety">
 <glossterm>6 Minutes for Safety</glossterm>
 <glossdef>A daily safety briefing for wildland fire that focuses on high risk events found within a firefighter's scope of work that are performed on an infrequent basis.</glossdef>
 <glossBody>
@@ -239,7 +239,7 @@
 <link href="#Supporting_Agency"><linktext>Supporting Agency</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Agency/Area_Coordination_Center">
+<glossentry id="Agency_Area_Coordination_Center">
 <glossterm>Agency/Area Coordination Center</glossterm>
 <glossdef>A facility which serves as a central point for one or more agencies to use in processing information and resource requests. It may also serve as a dispatch center for one of the agencies.</glossdef>
 </glossentry>
@@ -371,7 +371,7 @@
 <glossterm>Air Tanker</glossterm>
 <glossdef>Fixed-wing aircraft certified by FAA as being capable of transport and delivery of fire retardant solutions.</glossdef>
 </glossentry>
-<glossentry id="Air_Tanker/Fixed-Wing_Coordinator">
+<glossentry id="Air_Tanker_Fixed-Wing_Coordinator">
 <glossterm>Air Tanker/Fixed-Wing Coordinator</glossterm>
 <glossdef>This ICS position is responsible for coordinating air tanker and fixed-wing operations over an incident and reports to the Air Tactical Group Supervisor.</glossdef>
 <glossBody>
@@ -531,12 +531,12 @@
 <glossterm>Annual Certification</glossterm>
 <glossdef>Annual review by an employing agency of an individual's position qualifications and documentation certifying that the individual is fully qualified to perform duties and responsibilities for a specified position. Annual certification is based on established performance standards and agency specific requirements.</glossdef>
 </glossentry>
-<glossentry id="Annual_Operating_Plan_(for_Fire_Weather)">
+<glossentry id="Annual_Operating_Plan">
 <glossterm>Annual Operating Plan</glossterm>
 <glossdef>A procedural guide which describes fire meteorological services provided within the Geographic Area of responsibility, including the National Interagency Fire Center. The guide is based on the National Interagency Agreement and applicable Geographic Area Memorandum of Agreement.</glossdef>
 <glossBody>
 <glossAlt>
-<glossAcronym>for Fire Weather) (AOP</glossAcronym>
+<glossAcronym>AOP</glossAcronym>
 </glossAlt>
 </glossBody>
 </glossentry>
@@ -576,7 +576,7 @@
 <glossterm>Aramid</glossterm>
 <glossdef>The generic name for a high-strength, flame-resistant, synthetic fabric used in the shirts and jeans of firefighters. Nomex ®, a brand name for aramid fabric, is the term commonly used by firefighters.</glossdef>
 <related-links>
-<link href="#Nomex_®"><linktext>Nomex ®</linktext></link>
+<link href="#Nomex"><linktext>Nomex ®</linktext></link>
 </related-links>
 </glossentry>
 <glossentry id="Area_Command">
@@ -656,14 +656,9 @@
 <link href="#Exposure2"><linktext>Exposure</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Aspirate_(Foam)">
-<glossterm>Aspirate</glossterm>
+<glossentry id="Aspirate_Foam">
+<glossterm>Aspirate (Foam)</glossterm>
 <glossdef>To draw in gases (or other substances); nozzle aspirating systems draw air into the nozzle to mix with the foam solution.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Foam</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Assessment">
 <glossterm>Assessment</glossterm>
@@ -681,7 +676,7 @@
 <glossterm>Assistant</glossterm>
 <glossdef>Term used as a title for subordinates of the command staff positions. In some cases, assistants are also assigned to unit leader positions in the planning, logistics, and finance/administration sections. Qualifications, technical capability, and responsibility of assistants are normally less than those of the person holding the primary position.</glossdef>
 </glossentry>
-<glossentry id="Assistant_Area_Commander,_Logistics">
+<glossentry id="Assistant_Area_Commander_Logistics">
 <glossterm>Assistant Area Commander, Logistics</glossterm>
 <glossdef>The ICS position responsible for providing facilities, services and materials at the Area Command level, and for ensuring effective use of critical resources and supplies among those incidents under Area Command management. Reports to the Area Commander.</glossdef>
 <glossBody>
@@ -693,7 +688,7 @@
 <link href="#Area_Command"><linktext>Area Command</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Assistant_Area_Commander,_Plans">
+<glossentry id="Assistant_Area_Commander_Plans">
 <glossterm>Assistant Area Commander, Plans</glossterm>
 <glossdef>The ICS position responsible for collecting information from those incidents under Area Command management in order to assess, evaluate potential conflicts in establishing incident objectives, strategies, and prioritizing use of critical resources. Reports to the Area Commander.</glossdef>
 <glossBody>
@@ -950,7 +945,7 @@
 <glossterm>Ball Valve</glossterm>
 <glossdef>A valve in which fluid flow is controlled by a ball with a hole drilled through it. In one position, fluid flows through the hole. When the valve is turned 90 degrees (1/4 turn) the hole is perpendicular to the flow and the ball stops the flow. Intermediate valve positions can be used to adjust the flow.</glossdef>
 </glossentry>
-<glossentry id="Bambi_Bucket_®">
+<glossentry id="Bambi_Bucket">
 <glossterm>Bambi Bucket ®</glossterm>
 <glossdef>A collapsible bucket slung below a helicopter. Used to dip water from a variety of sources for fire suppression.</glossdef>
 </glossentry>
@@ -1388,7 +1383,7 @@
 <glossterm>Buying Team</glossterm>
 <glossdef>A team that supports incident procurement through the local administrative staff and is authorized to procure a wide range of services, supplies, and land and equipmental rentals. In addition, the Buying Team Leader has the responsibility of coordinating property accountability with the supply unit leader.</glossdef>
 </glossentry>
-<glossentry id="Buys_Ballot's_Law">
+<glossentry id="Buys_Ballots_Law">
 <glossterm>Buys Ballot's Law</glossterm>
 <glossdef>If a person stands with his back to the general wind, the high atmospheric pressure is found to his right in the Northern Hemisphere. The high pressure on the right moves clockwise and outward from the cell. The low pressure on the left moves counterclockwise and towards the center of the cell. This Law does not work in the presence of locally produced convective winds.</glossdef>
 </glossentry>
@@ -1640,23 +1635,13 @@
 <glossterm>Class B Foam</glossterm>
 <glossdef>Foam designed for use on Class B or flammable liquid fires; made from fluorocarbon-based surfactants, therefore capable of strong filming action, but incapable of efficient wetting of Class A fuels.</glossdef>
 </glossentry>
-<glossentry id="Class_II_Areas_(Air_Quality)">
-<glossterm>Class II Areas</glossterm>
+<glossentry id="Class_II_Areas_Air_Quality">
+<glossterm>Class II Areas (Air Quality)</glossterm>
 <glossdef>All areas of the country not designated Class I, including everything from non-Class I areas to urban areas. A greater amount of air pollution can be added to these areas than Class I.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Air Quality</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
-<glossentry id="Class_I_Areas_(Air_Quality)">
-<glossterm>Class I Areas</glossterm>
+<glossentry id="Class_I_Areas_Air_Quality">
+<glossterm>Class I Areas (Air Quality)</glossterm>
 <glossdef>Geographic areas designed by the Clean Air Act subject to the most stringent restrictions on allowable increment of air quality deterioration. Class I areas include Forest Service wildernesses and nation memorial parks over 5,000 acres, National Parks exceeding 6,000 acres, international parks, as well as other designated lands.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Air Quality</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Class_of_Fire">
 <glossterm>Class of Fire</glossterm>
@@ -1844,11 +1829,11 @@
 <glossterm>Compensation-for-Injury Manager</glossterm>
 <glossdef>Person responsible to the Compensation/Claims Unit Leader for administrative matters arising from serious injuries and fatalities occurring on the incident.</glossdef>
 </glossentry>
-<glossentry id="Compensation/Claims_Unit">
+<glossentry id="Compensation_Claims_Unit">
 <glossterm>Compensation/Claims Unit</glossterm>
 <glossdef>Functional unit within the Finance/Administration Section responsible for the overall management and direction of all Compensation-for-Injury and Claims Specialists assigned to the incident.</glossdef>
 </glossentry>
-<glossentry id="Compensation/Claims_Unit_Leader">
+<glossentry id="Compensation_Claims_Unit_Leader">
 <glossterm>Compensation/Claims Unit Leader</glossterm>
 <glossdef>The ICS position responsible for supervising the Compensation/Claims Unit. Reports to the Finance/Administration Section Chief.</glossdef>
 <glossBody>
@@ -1857,7 +1842,7 @@
 </glossAlt>
 </glossBody>
 <related-links>
-<link href="#Compensation/Claims_Unit"><linktext>Compensation/Claims Unit</linktext></link>
+<link href="#Compensation_Claims_Unit"><linktext>Compensation/Claims Unit</linktext></link>
 </related-links>
 </glossentry>
 <glossentry id="Competency">
@@ -1930,14 +1915,9 @@
 <glossterm>Conflagration Threat</glossterm>
 <glossdef>Likelihood that a wildfire capable of causing considerable damage will occur.</glossdef>
 </glossentry>
-<glossentry id="Consistency_(Foam)">
-<glossterm>Consistency</glossterm>
+<glossentry id="Consistency_Foam">
+<glossterm>Consistency (Foam)</glossterm>
 <glossdef>Uniformity and size of bubbles.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Foam</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Constant_Danger">
 <glossterm>Constant Danger</glossterm>
@@ -2383,14 +2363,9 @@
 <glossterm>Dense Sky Cover</glossterm>
 <glossdef>Sky cover that prevents detection of higher clouds or the sky above it.</glossdef>
 </glossentry>
-<glossentry id="Density_(Foam)">
-<glossterm>Density</glossterm>
+<glossentry id="Density_Foam">
+<glossterm>Density (Foam)</glossterm>
 <glossdef>The ratio of the original volume of the nonaerated foam solution to the resultant volume of foam. The inverse of expansion.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Foam</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Density_Altitude">
 <glossterm>Density Altitude</glossterm>
@@ -2617,7 +2592,7 @@
 <link href="#Group"><linktext>Group</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Division/Group_Supervisor">
+<glossentry id="Division_Group_Supervisor">
 <glossterm>Division/Group Supervisor</glossterm>
 <glossdef>The ICS position responsible for supervising equipment and personnel assigned to a division or group. Reports to a Branch Director or Operations Section Chief.</glossdef>
 <glossBody>
@@ -2878,14 +2853,9 @@
 <link href="#Litter"><linktext>Litter</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Durability_(Foam)">
-<glossterm>Durability</glossterm>
+<glossentry id="Durability_Foam">
+<glossterm>Durability (Foam)</glossterm>
 <glossdef>The effective life span of foam bubbles.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Foam</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Duty_Week">
 <glossterm>Duty Week</glossterm>
@@ -2965,7 +2935,7 @@
 </glossAlt>
 </glossBody>
 </glossentry>
-<glossentry id="Emergency_Management_Coordinator/Director">
+<glossentry id="Emergency_Management_Coordinator_Director">
 <glossterm>Emergency Management Coordinator/Director</glossterm>
 <glossdef>The individual within each political subdivision that has coordination responsibility for jurisdictional emergency management.</glossdef>
 </glossentry>
@@ -3091,14 +3061,9 @@
 <glossterm>Environmental Specialist</glossterm>
 <glossdef>Person responsible to the planning section chief for collecting and analyzing environmental information about the incident area, determining environmental restrictions and requirements, and providing the information as an input to the incident action and to incident personnel as needed.</glossdef>
 </glossentry>
-<glossentry id="Episode_(Pollution)">
-<glossterm>Episode</glossterm>
+<glossentry id="Episode_Pollution">
+<glossterm>Episode (Pollution)</glossterm>
 <glossdef>A condition of poor contaminant dispersion which may result in concentrations considered potentially harmful to health or welfare. Episodes may also occur during periods of fairly good dispersion if the source of air contaminants is extremely large.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Pollution</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Equilibrium_Moisture_Content">
 <glossterm>Equilibrium Moisture Content</glossterm>
@@ -3166,7 +3131,7 @@
 <related-links>
 <link href="#Agency_Certification"><linktext>Agency Certification</linktext></link>
 <link href="#Re-Certification"><linktext>Re-Certification</linktext></link>
-<link href="#Trainer/Coach"><linktext>Trainer/Coach</linktext></link>
+<link href="#Trainer_Coach"><linktext>Trainer/Coach</linktext></link>
 </related-links>
 </glossentry>
 <glossentry id="Evaporation">
@@ -3177,7 +3142,7 @@
 <glossterm>Event</glossterm>
 <glossdef>A planned, non-emergency activity. ICS can be used as the management system for a wide range of events, e.g., parades, concerts or sporting events.</glossdef>
 </glossentry>
-<glossentry id="Exempt_/_Nonexempt">
+<glossentry id="Exempt_Nonexempt">
 <glossterm>Exempt / Nonexempt</glossterm>
 <glossdef>Categories of employees as defined in the Fair Labor Standards Act (FLSA), who are either covered or exempted from coverage under the ActPay entitlements vary depending on the employee's FLSA status.</glossdef>
 </glossentry>
@@ -3267,30 +3232,25 @@
 <glossterm>Eyewitness</glossterm>
 <glossdef>Person who sees evidence of criminal activity, actual commission of a crime or a criminal fleeing a crime scene.</glossdef>
 </glossentry>
-<glossentry id="FIRDAT_(Fire_Data_Manipulation_Program)">
+<glossentry id="FIRDAT_Fire_Data_Manipulation_Program">
 <glossterm>FIRDAT</glossterm>
 <glossdef>A routine of FIREFAMILY that combines historical weather records with the equations of the NFDRS to produce frequency distributions of the NFDRS indexes and components.</glossdef>
 <glossBody>
 <glossAlt>
-<glossAcronym>Fire Data Manipulation Program</glossAcronym>
+<glossSynonym>Fire Data Manipulation Program</glossSynonym>
 </glossAlt>
 </glossBody>
 <related-links>
-<link href="#FIREFAMILY_(Fire_Data_Program)"><linktext>FIREFAMILY</linktext></link>
+<link href="#FIREFAMILY_Fire_Data_Program"><linktext>FIREFAMILY (Fire Data Program)</linktext></link>
 </related-links>
 </glossentry>
 <glossentry id="FIRECAST">
 <glossterm>FIRECAST</glossterm>
 <glossdef>Set of computerized FIREMODELS run during fire season at the operations coordination center on preselected locations to indicate possible fire spread from those points for that date.</glossdef>
 </glossentry>
-<glossentry id="FIREFAMILY_(Fire_Data_Program)">
-<glossterm>FIREFAMILY</glossterm>
+<glossentry id="FIREFAMILY_Fire_Data_Program">
+<glossterm>FIREFAMILY (Fire Data Program)</glossterm>
 <glossdef>A computer program that uses historical weather and fire data for fire planning. Its three major routines are FIRDAT, SEASON, and FIRINF.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Fire Data Program</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="FIREMODEL">
 <glossterm>FIREMODEL</glossterm>
@@ -3397,26 +3357,29 @@
 <glossterm>Final Run</glossterm>
 <glossdef>An air tanker is "on final" when it is on line with the target and intends to make the drop on that pass; also applies to cargo dropping.</glossdef>
 </glossentry>
-<glossentry id="Finance/Administration_Section">
+<glossentry id="Finance_Administration_Section">
 <glossterm>Finance/Administration Section</glossterm>
 <glossdef>The section responsible for all administrative and financial considerations on an incident.</glossdef>
 <related-links>
-<link href="#Compensation/Claims_Unit"><linktext>Compensation/Claims Unit</linktext></link>
+<link href="#Compensation_Claims_Unit"><linktext>Compensation/Claims Unit</linktext></link>
 <link href="#Cost_Unit"><linktext>Cost Unit</linktext></link>
 <link href="#Procurement_Unit"><linktext>Procurement Unit</linktext></link>
 <link href="#Time_Unit"><linktext>Time Unit</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Finance/Administration_Section_Chief">
+<glossentry id="Finance_Administration_Section_Chief">
 <glossterm>Finance/Administration Section Chief</glossterm>
 <glossdef>The ICS position responsible for supervising the Finance/Administration Section. Reports to the Incident Commander and is a member of the General Staff. This position may have one or more deputies assigned.</glossdef>
 <glossBody>
 <glossAlt>
-<glossAcronym>FSC1 or FSC2</glossAcronym>
+<glossAcronym>FSC1</glossAcronym>
+</glossAlt>
+<glossAlt>
+<glossAcronym>FSC2</glossAcronym>
 </glossAlt>
 </glossBody>
 <related-links>
-<link href="#Finance/Administration_Section"><linktext>Finance/Administration Section</linktext></link>
+<link href="#Finance_Administration_Section"><linktext>Finance/Administration Section</linktext></link>
 </related-links>
 </glossentry>
 <glossentry id="Fine_Fuel_Moisture">
@@ -3539,21 +3502,21 @@
 <glossterm>Fire Climax</glossterm>
 <glossdef>Plant community maintained by periodic fires.</glossdef>
 </glossentry>
-<glossentry id="Fire_Concentration_(Complex)">
+<glossentry id="Fire_Concentration_Complex">
 <glossterm>Fire Concentration</glossterm>
 <glossdef>Generally, a situation in which numerous fires are burning in a locality.</glossdef>
 <glossBody>
 <glossAlt>
-<glossAcronym>Complex</glossAcronym>
+<glossSynonym>Fire Complex</glossSynonym>
 </glossAlt>
 </glossBody>
 </glossentry>
-<glossentry id="Fire_Concentration_(Complex)1">
+<glossentry id="Fire_Concentration_Complex1">
 <glossterm>Fire Concentration</glossterm>
 <glossdef>More specifically, the number of fires per unit area or locality for a given period, generally a year.</glossdef>
 <glossBody>
 <glossAlt>
-<glossAcronym>Complex</glossAcronym>
+<glossSynonym>Fire Complex</glossSynonym>
 </glossAlt>
 </glossBody>
 </glossentry>
@@ -4071,12 +4034,12 @@
 <glossterm>Fireground</glossterm>
 <glossdef>Operational area on which firefighters combat a fire.</glossdef>
 </glossentry>
-<glossentry id="Firelamp_(Fire_and_Land_Management_Planning)">
+<glossentry id="Firelamp_Fire_and_Land_Management_Planning">
 <glossterm>Firelamp</glossterm>
 <glossdef>Computerized multi-resource model that simulates the effects that naturally caused prescribed fires have on the future production of natural resources such as timber, forage, wildlife, recreation, and water.</glossdef>
 <glossBody>
 <glossAlt>
-<glossAcronym>Fire and Land Management Planning</glossAcronym>
+<glossSynonym>Fire and Land Management Planning</glossSynonym>
 </glossAlt>
 </glossBody>
 </glossentry>
@@ -4180,8 +4143,8 @@
 <glossterm>Flame Thrower</glossterm>
 <glossdef>Device for throwing a stream of flaming liquid, used to facilitate rapid ignition during burn out operations on a wildfire or during a prescribed fire operation.</glossdef>
 <related-links>
-<link href="#Terra_Torch_®" role="other" otherrole="synonym"><linktext>Terra Torch ®</linktext></link>
-<link href="#Terra_Torch_®" role="other" otherrole="synonym"><linktext>Terra Torch ®</linktext></link>
+<link href="#Terra_Torch" role="other" otherrole="synonym"><linktext>Terra Torch ®</linktext></link>
+<link href="#Terra_Torch" role="other" otherrole="synonym"><linktext>Terra Torch ®</linktext></link>
 <link href="#Backfire_Torch"><linktext>Backfire Torch</linktext></link>
 <link href="#Backfire_Torch"><linktext>Backfire Torch</linktext></link>
 <link href="#Drip_Torch"><linktext>Drip Torch</linktext></link>
@@ -4448,14 +4411,9 @@
 <glossterm>Free Drop</glossterm>
 <glossdef>Cargo, not attached to a parachute, that is dropped intentionally from an aircraft in flight.</glossdef>
 </glossentry>
-<glossentry id="Free_Flow_(Hydraulics)">
-<glossterm>Free Flow</glossterm>
+<glossentry id="Free_Flow_Hydraulics">
+<glossterm>Free Flow (Hydraulics)</glossterm>
 <glossdef>Maximum water flow rate a fire pump will attain when there are no restrictions at the pump outlet or losses due to friction or head.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Hydraulics</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Freezing_Rain">
 <glossterm>Freezing Rain</glossterm>
@@ -4947,14 +4905,9 @@
 <glossterm>Handline</glossterm>
 <glossdef>Fireline constructed with hand tools.</glossdef>
 </glossentry>
-<glossentry id="Hangup_(Tree_Falling)">
-<glossterm>Hangup</glossterm>
+<glossentry id="Hangup_Tree_Falling">
+<glossterm>Hangup (Tree Falling)</glossterm>
 <glossdef>A situation in which a tree is lodged in another, preventing it from falling to the ground.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Tree Falling</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Hard_Suction_Hose">
 <glossterm>Hard Suction Hose</glossterm>
@@ -6025,7 +5978,7 @@
 <glossterm>Ladder Fuels</glossterm>
 <glossdef>Fuels which provide vertical continuity between strata, thereby allowing fire to carry from surface fuels into the crowns of trees or shrubs with relative ease. They help initiate and assure the continuation of crowning.</glossdef>
 </glossentry>
-<glossentry id="Land/Resource_Management_Plan">
+<glossentry id="Land_Resource_Management_Plan">
 <glossterm>Land/Resource Management Plan</glossterm>
 <glossdef>A document prepared with public participation and approved by an agency administrator that provides general guidance and direction for land and resource management activities for an administrative area. The L/RMP identifies the need for fire’s role in a particular area and for a specific benefit. The objectives in the L/RMP provide the basis for the development of fire management objective and the fire management program in the designated area.</glossdef>
 <glossBody>
@@ -6090,7 +6043,7 @@
 <glossterm>Leader</glossterm>
 <glossdef>The ICS title for an individual responsible for a task force, strike team, or functional unit.</glossdef>
 </glossentry>
-<glossentry id="Leader's_Intent">
+<glossentry id="Leaders_Intent">
 <glossterm>Leader's Intent</glossterm>
 <glossdef>A concise statement that outlines what individuals must know in order to be successful for a given assignment. The intent communicates three essential pieces of information: - Task – What is the goal or objective - Purpose – Why it is to be done - End state – How it should look when successfully completed</glossdef>
 </glossentry>
@@ -6156,9 +6109,14 @@
 <glossterm>Lifting Processes</glossterm>
 <glossdef>Any of the processes that lead to upward vertical motion in the atmosphere. These processes may include low level convergence, heating or thermal convection, orographic lifting over the mountains, and frontal lifting.</glossdef>
 </glossentry>
-<glossentry id="Light_(Fine)_Fuels">
-<glossterm>Light (Fine) Fuels</glossterm>
+<glossentry id="Light_Fine_Fuels">
+<glossterm>Light Fuels</glossterm>
 <glossdef>Fast-drying fuels, generally with a comparatively high surface area-to-volume ratio, which are less than 1/4-inch in diameter and have a timelag of 1 hour or less. These fuels readily ignite and are rapidly consumed by fire when dry.</glossdef>
+<glossBody>
+<glossAlt>
+<glossSynonym>Fine Fuels</glossSynonym>
+</glossAlt>
+</glossBody>
 </glossentry>
 <glossentry id="Light_Burn">
 <glossterm>Light Burn</glossterm>
@@ -6395,12 +6353,12 @@
 <glossterm>Lookout</glossterm>
 <glossdef>A person designated to detect and report fires from a vantage point.</glossdef>
 </glossentry>
-<glossentry id="Lookout(s),_Communication(s),_Escape_Route(s),_and_Safety_Zone(s)">
-<glossterm>Lookout</glossterm>
+<glossentry id="Lookouts_Communications_Escape_Routes_and_Safety_Zones">
+<glossterm>Lookout(s), Communication(s), Escape Route(s), and Safety Zone(s)</glossterm>
 <glossdef>Elements of a safety system used by fire fighters to routinely assess their current situation with respect to wildland firefighting hazards.</glossdef>
 <glossBody>
 <glossAlt>
-<glossAcronym>s), Communication(s), Escape Route(s), and Safety Zone(s) (LCES</glossAcronym>
+<glossAcronym>LCES</glossAcronym>
 </glossAlt>
 </glossBody>
 </glossentry>
@@ -6468,14 +6426,9 @@
 <glossterm>Major Disaster</glossterm>
 <glossdef>Any natural catastrophe or, regardless of cause, any fire, flood, or explosion, in any part of the United States, which in the determination of the President causes damage of sufficient severity and magnitude to warrant major disaster assistance.</glossdef>
 </glossentry>
-<glossentry id="Major_Repair_(Aviation)">
-<glossterm>Major Repair</glossterm>
+<glossentry id="Major_Repair_Aviation">
+<glossterm>Major Repair (Aviation)</glossterm>
 <glossdef>A repair (1) that, if improperly done, might appreciably affect weight, balance, structural strength, or other qualities affecting airworthiness or (2) that is not done according to accepted practices or cannot be done by elementary operations.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Aviation</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Major_Stationary_Sources">
 <glossterm>Major Stationary Sources</glossterm>
@@ -6989,7 +6942,7 @@
 </glossAlt>
 </glossBody>
 </glossentry>
-<glossentry id="National_Environmental_Satellite,_Data_and_Information_Service">
+<glossentry id="National_Environmental_Satellite_Data_and_Information_Service">
 <glossterm>National Environmental Satellite, Data and Information Service</glossterm>
 <glossdef>A National Oceanic and Atmospheric Administration Agency.</glossdef>
 <glossBody>
@@ -7164,14 +7117,9 @@
 <glossterm>Neutral Atmosphere</glossterm>
 <glossdef>Condition in which temperature decrease with increasing altitude is equal to the dry adiabatic lapse rate (i.e., the atmosphere neither aids nor hinders large-scale vertical motion).</glossdef>
 </glossentry>
-<glossentry id="Night_(Aviation)">
-<glossterm>Night</glossterm>
+<glossentry id="Night_Aviation">
+<glossterm>Night (Aviation)</glossterm>
 <glossdef>The time between the end of evening civil twilight and the beginning of morning civil twilight, as published in the American Air Almanac, converted to local time.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Aviation</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Nitrogen_Dioxide">
 <glossterm>Nitrogen Dioxide</glossterm>
@@ -7191,7 +7139,7 @@
 </glossAlt>
 </glossBody>
 </glossentry>
-<glossentry id="Nomex_®">
+<glossentry id="Nomex">
 <glossterm>Nomex ®</glossterm>
 <glossdef>Trade name for a fire resistant synthetic material used in the manufacturing of flight suits and pants and shirts used by firefighters. Aramid is the generic name.</glossdef>
 </glossentry>
@@ -8260,7 +8208,7 @@
 <glossterm>Radiosonde</glossterm>
 <glossdef>A device carried aloft by a balloon equipped with measuring instruments that automatically convert temperature, pressure, and humidity data into electrical impulses and transmit this information to a ground recorder.</glossdef>
 <related-links>
-<link href="#Sounding_(Upper_Air_Sounding)"><linktext>Sounding</linktext></link>
+<link href="#Sounding_Upper_Air_Sounding"><linktext>Sounding (Upper Air Sounding)</linktext></link>
 </related-links>
 </glossentry>
 <glossentry id="Railroad_Fire">
@@ -8331,32 +8279,17 @@
 <link href="#Preparedness2"><linktext>Preparedness</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Rear_(Of_a_Fire)">
-<glossterm>Rear</glossterm>
+<glossentry id="Rear_Of_a_Fire">
+<glossterm>Rear (Of a Fire)</glossterm>
 <glossdef>That portion of a fire spreading directly into the wind or down slope.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Of a Fire</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
-<glossentry id="Rear_(Of_a_Fire)1">
-<glossterm>Rear</glossterm>
+<glossentry id="Rear_Of_a_Fire1">
+<glossterm>Rear (Of a Fire)</glossterm>
 <glossdef>That portion of a fire edge opposite the head.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Of a Fire</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
-<glossentry id="Rear_(Of_a_Fire)2">
-<glossterm>Rear</glossterm>
+<glossentry id="Rear_Of_a_Fire2">
+<glossterm>Rear (Of a Fire)</glossterm>
 <glossdef>Slowest spreading portion of a fire edge. Also called heel of a fire.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Of a Fire</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Reasonably_Available_Control_Measures">
 <glossterm>Reasonably Available Control Measures</glossterm>
@@ -8809,14 +8742,9 @@
 <glossterm>Route Card</glossterm>
 <glossdef>Index card used by a dispatcher and frequently carried on fire apparatus which lists specific directions for responding to individual rural properties. The card frequently includes a description of the property, water sources available, and any special information pertinent to fire suppression and rescue operations. Also called running card.</glossdef>
 </glossentry>
-<glossentry id="Run_(Of_a_Fire)">
-<glossterm>Run</glossterm>
+<glossentry id="Run_Of_a_Fire">
+<glossterm>Run (Of a Fire)</glossterm>
 <glossdef>Rapid advance of the head of a fire, characterized by a marked transition in fireline intensity and rate of spread with respect to that noted before and after the advance.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Of a Fire</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Running_Fire">
 <glossterm>Running Fire</glossterm>
@@ -9158,13 +9086,23 @@
 <glossterm>Short-Term Fire Retardant</glossterm>
 <glossdef>Fire retardant that inhibits combustion primarily by the cooling and smothering action of water. Chemicals may be added to the water to alter its viscosity or retard its evaporation, thereby increasing its effectiveness.</glossdef>
 </glossentry>
-<glossentry id="Short_Takeoff_or_Landing_(STOL)_Aircraft">
-<glossterm>Short Takeoff or Landing (STOL) Aircraft</glossterm>
+<glossentry id="Short_Takeoff_or_Landing_Aircraft">
+<glossterm>Short Takeoff or Landing Aircraft</glossterm>
 <glossdef>An aircraft which has the capability of operating from a STOL runway in accordance with applicable airworthiness and operating regulations.</glossdef>
+<glossBody>
+<glossAlt>
+<glossShortForm>STOL Aircraft</glossShortForm>
+</glossAlt>
+</glossBody>
 </glossentry>
-<glossentry id="Short_Takeoff_or_Landing_(STOL)_Airstrip">
-<glossterm>Short Takeoff or Landing (STOL) Airstrip</glossterm>
+<glossentry id="Short_Takeoff_or_Landing_Airstrip">
+<glossterm>Short Takeoff or Landing Airstrip</glossterm>
 <glossdef>Developed or undeveloped area that has been tested and will accommodate STOL aircraft.</glossdef>
+<glossBody>
+<glossAlt>
+<glossShortForm>STOL Airstrip</glossShortForm>
+</glossAlt>
+</glossBody>
 </glossentry>
 <glossentry id="Shoulder_Carry">
 <glossterm>Shoulder Carry</glossterm>
@@ -9424,14 +9362,9 @@
 <glossterm>Smokey Bear</glossterm>
 <glossdef>The symbol of the Cooperative Forest Fire Prevention Program since 1945. Smokey's image is protected by US Federal Law and is administered by the USDA Forest Service, the National Association of State Foresters and the Ad Council.</glossdef>
 </glossentry>
-<glossentry id="Smoking_(As_a_Fire_Cause)">
-<glossterm>Smoking</glossterm>
+<glossentry id="Smoking_As_a_Fire_Cause">
+<glossterm>Smoking (As a Fire Cause)</glossterm>
 <glossdef>Wildfires caused by smokers from matches, lighters, tobacco, or other smoking material.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>As a Fire Cause</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Smoldering_Combustion">
 <glossterm>Smoldering Combustion</glossterm>
@@ -9481,14 +9414,9 @@
 <glossterm>Sound Warbler</glossterm>
 <glossdef>A signaling device mounted on retardant aircraft which generates a tremulous siren sound to warn firefighters on the ground that a plane is approaching to drop retardant.</glossdef>
 </glossentry>
-<glossentry id="Sounding_(Upper_Air_Sounding)">
-<glossterm>Sounding</glossterm>
+<glossentry id="Sounding_Upper_Air_Sounding">
+<glossterm>Sounding (Upper Air Sounding)</glossterm>
 <glossdef>A sampling of upper air conditions made by means of instruments and a small radio transmitter on a free balloon. Automatic radio signals originated by action of weather instruments are sent to a ground receiver. These signals are interpreted for use in analyzing and predicting upper air conditions over a wide area of the earth. Weather elements determined at a number of altitude points as the balloon rises are temperature, atmospheric moisture, pressure, wind direction and speed. Similar soundings may be made using fixed balloons or tethersondes.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Upper Air Sounding</glossAcronym>
-</glossAlt>
-</glossBody>
 <related-links>
 <link href="#Radiosonde"><linktext>Radiosonde</linktext></link>
 </related-links>
@@ -9530,7 +9458,7 @@
 </glossAlt>
 </glossBody>
 </glossentry>
-<glossentry id="Special_Visual_Flight_Rules_(VFR)">
+<glossentry id="Special_Visual_Flight_Rules">
 <glossterm>Special Visual Flight Rules</glossterm>
 <glossdef>Aircraft operating in accordance with clearances within control zones in weather conditions less than the basic Visual Flight Rules weather minima.</glossdef>
 <glossBody>
@@ -9784,7 +9712,7 @@
 <glossterm>Statistics</glossterm>
 <glossdef>A branch of mathematics dealing with the collection, analysis, and interpretation of numerical data.</glossdef>
 </glossentry>
-<glossentry id="Status/Check-In_Recorder">
+<glossentry id="Status_Check-In_Recorder">
 <glossterm>Status/Check-In Recorder</glossterm>
 <glossdef>This ICS position is responsible for checking in and maintaining current status for incident assigned resources and reports to the Resources Unit Leader. Each incident check-in location will have at least one Check-In Recorder assigned.</glossdef>
 <glossBody>
@@ -9868,7 +9796,7 @@
 <link href="#Strike_Team"><linktext>Strike Team</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Strike_Team_Leader_Tractor/Plow">
+<glossentry id="Strike_Team_Leader_Tractor_Plow">
 <glossterm>Strike Team Leader Tractor/Plow</glossterm>
 <glossdef>This ICS position is responsible for the direct supervision of a tractor/plow strike team.</glossdef>
 <glossBody>
@@ -9920,14 +9848,9 @@
 <glossterm>Structure</glossterm>
 <glossdef>A constructed object, usually a free-standing building above ground.</glossdef>
 </glossentry>
-<glossentry id="Structure_(Vegetative)">
-<glossterm>Structure</glossterm>
+<glossentry id="Structure_Vegetative">
+<glossterm>Structure (Vegetative)</glossterm>
 <glossdef>The arrangement of vegetation in terms of density, basal area, cover, and vertical arrangement.</glossdef>
-<glossBody>
-<glossAlt>
-<glossAcronym>Vegetative</glossAcronym>
-</glossAlt>
-</glossBody>
 </glossentry>
 <glossentry id="Structure_Fire">
 <glossterm>Structure Fire</glossterm>
@@ -10289,7 +10212,7 @@
 <link href="#Ten-hour_Timelag_Fuel_Moisture"><linktext>Ten-hour Timelag Fuel Moisture</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Terra_Torch_®">
+<glossentry id="Terra_Torch">
 <glossterm>Terra Torch ®</glossterm>
 <glossdef>Device for throwing a stream of flaming liquid, used to facilitate rapid ignition during burn out operations on a wild fire or during a prescribed fire operation.</glossdef>
 <related-links>
@@ -10480,7 +10403,7 @@
 <glossterm>Trainee</glossterm>
 <glossdef>An individual who has met all required training and position experience for a specified position and is approved by their home unit's certifying official, to initiate a performance based training assignment in order to become qualified in the position.</glossdef>
 </glossentry>
-<glossentry id="Trainer/Coach">
+<glossentry id="Trainer_Coach">
 <glossterm>Trainer/Coach</glossterm>
 <glossdef>A position-qualified individual who provides instruction to a trainee in the classroom, on-the-job, or on an incident. While many of the requirements of the trainer/coach are similar to the evaluator, it is important that the roles of training and evaluation remain separate.</glossdef>
 </glossentry>
@@ -10659,11 +10582,11 @@
 <glossterm>Unlined Fire Hose</glossterm>
 <glossdef>Hose commonly of cotton, linen, or synthetic fiber construction without rubber tube or lining, often used for wildfires because of its light weight and self protecting (weeping) characteristics; such hose is attached to first-aid standpipes in buildings. At a specified flow, friction loss in unlined hose of a stated diameter is about twice that of lined fire hose.</glossdef>
 </glossentry>
-<glossentry id="Upper_Level_(Cold)_Low">
+<glossentry id="Upper_Level_Cold_Low">
 <glossterm>Upper Level (Cold) Low</glossterm>
 <glossdef>(Upper Level Disturbance, Cold Low Aloft) A circulation feature of the upper atmosphere where pressure, at a constant altitude, is lowest. Winds blow counter-clockwise around the center in an approximately circular pattern. Upper level lows are usually quite small. The mechanics of these upper lows is such that a pool of cool moist air always accompanies their development. There is often no evidence of low pressure at the earth's surface. An upper low may exist above a surface high pressure system.</glossdef>
 </glossentry>
-<glossentry id="Upper_Level_(Cold)_Trough">
+<glossentry id="Upper_Level_Cold_Trough">
 <glossterm>Upper Level (Cold) Trough</glossterm>
 <glossdef>(Trough, Trough Aloft, Upper Level [Cold] Low) An elongated area of relatively low pressure, at constant altitude, in the atmosphere. The opposite of an upper level ridge. Upper level troughs are usually oriented north-south with the north end open. That is, air currents moving from west to east around the earth flow around three sides of the trough then turn eastward rather than toward the west, as in the case of a closed circulation. A large upper level trough may have one or more small upper level closed low circulation systems within it.</glossdef>
 </glossentry>
@@ -11218,7 +11141,7 @@
 <link href="#Woody_Fuel_Moisture"><linktext>Woody Fuel Moisture</linktext></link>
 </related-links>
 </glossentry>
-<glossentry id="Work/Rest_Ratio">
+<glossentry id="Work_Rest_Ratio">
 <glossterm>Work/Rest Ratio</glossterm>
 <glossdef>An expression of the amount of rest that is required for each hour an individual is in work status. Current NWCG guidelines require one hour of rest for every two hours in work status.</glossdef>
 </glossentry>
