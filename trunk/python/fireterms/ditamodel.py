@@ -21,6 +21,12 @@ class GlossDef (TextElement) :
 	def __init__(self, definition) : 
 		TextElement.__init__(self, definition)
 		self._elementName = u'glossdef'
+
+class Author(TextElement) : 
+	def __init__(self, term) :
+		TextElement.__init__(self, term)
+		self._elementName = u'author'
+
 		
 class GlossAcronym(TextElement) : 
 	def __init__(self, term) :
@@ -130,13 +136,70 @@ class Source (TextElement) :
 			retval = u'<%s href="%s" />' % (self._elementName, self._href)
 		return retval
 
+class CritDates (object) : 
+	def __init__(self) : 
+		self._created = None
+		self._revised = []
+	def addRevised(self, date) : 
+		self._revised.append(date)
+	def setCreated(self, date) : 
+		self._created = date
+	def getCreated(self) : 
+		return self._created
+	def ustr(self) : 
+		retval = [u'<critdates>']
+		if self._created != None : 
+			retval.append(u'<created date="%s"/>' % self._created)
+		for rev in self._revised :
+			retval.append(u'<revised date="%s"/>' % rev)
+		retval.append(u'</critdates>')
+		return '\n'.join(retval)
+		
+class Prolog(object) : 
+	def __init__(self, author, source, critdates) : 
+		self._author = author
+		self._source = source
+		self._critdates = critdates
+	def ustr(self) : 
+		retval = [ u'<prolog>' ] 
+		if self._author != None : 
+			retval.append(self._author.ustr())
+		if self._source != None : 
+			retval.append(self._source.ustr())
+		if self._critdates != None : 
+			retval.append(self._critdates.ustr())
+		retval.append(u'</prolog>')
+		return '\n'.join(retval)
+		
+class Note (object) : 
+	orthodoxTypes = ['note', 'tip', 'fastpath', 'restriction', 'important', 'remember',
+				'attention','caution','notice', 'danger', 'warning']
+	def __init__(self, note, notetype=None) : 
+		self._note = note
+		self._type = notetype
+		self._othertype = None
+		if notetype != None : 
+			if not (notetype in Note.orthodoxTypes) : 
+				self._othertype = notetype
+				self._type = 'other'
+	def ustr(self) : 
+		retval = []
+		if self._type == None :
+			retval.append(u'<note>') 
+		else if self._othertype == None: 
+			retval.append(u'<note type="%s">' % self._type) 
+		else : 
+			retval.append(u'<note type="other" othertype="%s">' % self._othertype) 
+		retval.append(self._note) 
+		retval.append(u'</note>')
 	
 class GlossEntry (object) : 
-	def __init__(self, term, gdef, myid=None) : 
+	def __init__(self, term, gdef, myid=None, pos= None, prolog=None) : 
 		self._term = GlossTerm(term)
 		self._gdef = GlossDef(gdef)
 		self._id   = myid
-		self._partOfSpeech = None
+		self._partOfSpeech = pos
+		self._prolog = prolog
 		self._alts = []
 		self._related = []
 		
@@ -182,6 +245,8 @@ class GlossEntry (object) :
 	def ustr(self) :
 		retval = [ u'<glossentry id="%s">' % self.getId(),
 		           self._term.ustr(), self._gdef.ustr() ] 
+		if self._prolog != None : 
+			retavl.append(self._prolog)
 		if (self._partOfSpeech != None) or (len(self._alts) > 0) :
 			retval.append(u'<glossBody>')
 			if self._partOfSpeech != None : 

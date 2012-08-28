@@ -72,6 +72,8 @@ def parseEntry(tag) :
 				if (type(refTag) == BeautifulSoup.Tag and refTag.name == u'a') : 
 					refurl =  urlparse.urlparse(refTag['href'])
 					syns.append(refurl.fragment)
+					if tag.em.string.startswith(u'see:') : 
+						print "%s -> %s" % (englishLabel, refurl.fragment)
 		if tag.em.string.startswith(u'see also') : 
 			for refTag in tag.contents : 
 				if (type(refTag) == BeautifulSoup.Tag and refTag.name == u'a') : 

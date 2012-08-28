@@ -1,3 +1,9 @@
+class Definition (str) : 
+	def setPartOfSpeech(self, pos) : 
+		self._partOfSpeech = pos
+	def getPartOfSpeech(self, pos) : 
+		return self._partOfSpeech
+
 class Term (object) : 
 	def __init__(self, key, label, defs, refs, syns, acronyms=None, abbrev=None, shortForms=None) : 
 		self._key = key
