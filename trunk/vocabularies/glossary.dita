@@ -200,9 +200,14 @@
 		<glossdef>That portion of the fire with rapid fire spread with higher
 			intensity which is normally burning with the wind and/or up slope.
 			Also called: forward fire, or a run.</glossdef>
+		<glossBody>
+			<glossAlt>
+				<glossSynonym>Head Fire</glossSynonym>
+			</glossAlt>
+		</glossBody>
 		<related-links>
-			<link href="#Head_Fire" role="other" otherrole="synonym">
-				<linktext>Head Fire</linktext>
+			<link href="#Run_Of_a_Fire">
+				<linktext>Run (of a fire)</linktext>
 			</link>
 		</related-links>
 	</glossentry>
@@ -695,14 +700,17 @@
 			swampland, or other terrain.</glossdef>
 		<glossBody>
 			<glossAlt>
+				<glossSynonym id="orv">Off-road Vehicle</glossSynonym>
+			</glossAlt>
+			<glossAlt>
 				<glossAcronym>ATV</glossAcronym>
 			</glossAlt>
+			<glossAlt>
+				<glossAcronym>ORV</glossAcronym>
+				<glossAlternateFor href="#All_Terrain_Vehicle/orv"/>
+			</glossAlt>
 		</glossBody>
-		<related-links>
-			<link href="#Off-road_Vehicle" role="other" otherrole="synonym">
-				<linktext>Off-road Vehicle</linktext>
-			</link>
-		</related-links>
+		
 	</glossentry>
 	<glossentry id="Alligatoring">
 		<glossterm>Alligatoring</glossterm>
@@ -2342,10 +2350,7 @@
 		<glossterm>Charged Line</glossterm>
 		<glossdef>Hose filled with water under pressure and ready to
 			use.</glossdef>
-		<related-links>
-			<link href="#Live_Line" role="other" otherrole="synonym">
-				<linktext>Live Line</linktext>
-			</link>
+		<related-links>		
 			<link href="#Live_Reel">
 				<linktext>Live Reel</linktext>
 			</link>
@@ -2851,12 +2856,11 @@
 			serve as generalized wildfire rankings. The risk of loss of key
 			ecosystem components from wildfires increases from Condition Class 1
 			(lowest risk) to Condition Class 3 (highest risk).</glossdef>
-		<related-links>
-			<link href="#Fire_Regime_Current_Condition_Class" role="other"
-				otherrole="synonym">
-				<linktext>Fire Regime Current Condition Class</linktext>
-			</link>
-		</related-links>
+		<glossBody>
+			<glossAlt>
+				<glossSynonym>Fire Regime Current Condition Class</glossSynonym>
+			</glossAlt>
+		</glossBody>	
 	</glossentry>
 	<glossentry id="Condition_of_Vegetation">
 		<glossterm>Condition of Vegetation</glossterm>
@@ -3658,10 +3662,12 @@
 		<glossterm>Detection</glossterm>
 		<glossdef>The act or system of discovering and locating
 			fires.</glossdef>
-		<related-links>
-			<link href="#Fire_Detection" role="other" otherrole="synonym">
-				<linktext>Fire Detection</linktext>
-			</link>
+		<glossBody>
+			<glossAlt>
+				<glossSynonym>Fire Detection</glossSynonym>
+			</glossAlt>
+		</glossBody>
+		<related-links>		
 			<link href="#Discovery">
 				<linktext>Discovery</linktext>
 			</link>
@@ -4139,11 +4145,11 @@
 			(velocity x mass) as it approaches the ground. The latter determines
 			the relative coverage level of the fire retardant on fuels within
 			the pattern.</glossdef>
-		<related-links>
-			<link href="#Pattern" role="other" otherrole="synonym">
-				<linktext>Pattern</linktext>
-			</link>
-		</related-links>
+		<glossBody>
+			<glossAlt>
+				<glossSynonym>Pattern</glossSynonym>
+			</glossAlt>
+		</glossBody>		
 	</glossentry>
 	<glossentry id="Drop_Zone">
 		<glossterm>Drop Zone</glossterm>
@@ -5397,15 +5403,6 @@
 			protection as a species against the effects of wildland fire, or
 			even a strengthening or enhancement by it.</glossdef>
 	</glossentry>
-	<glossentry id="Fire_Detection">
-		<glossterm>Fire Detection</glossterm>
-		<glossdef>Act or system of discovering and locating fires.</glossdef>
-		<related-links>
-			<link href="#Detection" role="other" otherrole="synonym">
-				<linktext>Detection</linktext>
-			</link>
-		</related-links>
-	</glossentry>
 	<glossentry id="Fire_Discovery">
 		<glossterm>Fire Discovery</glossterm>
 		<glossdef>The act of determining that a fire exists; does not include
@@ -5719,19 +5716,6 @@
 		<related-links>
 			<link href="#Fire_Regime_Groups">
 				<linktext>Fire Regime Groups</linktext>
-			</link>
-		</related-links>
-	</glossentry>
-	<glossentry id="Fire_Regime_Current_Condition_Class">
-		<glossterm>Fire Regime Current Condition Class</glossterm>
-		<glossdef>A qualitative measure classified into three classes describing
-			the relative degree of departure from historical fire regimes,
-			possibly resulting in alterations of key ecosystem components such
-			as species composition, structural stage, stand age, canopy closure,
-			and fuel loadings.</glossdef>
-		<related-links>
-			<link href="#Condition_Class" role="other" otherrole="synonym">
-				<linktext>Condition Class</linktext>
 			</link>
 		</related-links>
 	</glossentry>
@@ -6227,10 +6211,12 @@
 		<glossdef>Device for throwing a stream of flaming liquid, used to
 			facilitate rapid ignition during burn out operations on a wildfire
 			or during a prescribed fire operation.</glossdef>
-		<related-links>
-			<link href="#Terra_Torch" role="other" otherrole="synonym">
-				<linktext>Terra Torch ®</linktext>
-			</link>
+		<glossBody>
+			<glossAlt>
+				<glossSynonym>Terra Torch ®</glossSynonym>
+			</glossAlt>
+		</glossBody>
+		<related-links>			
 			<link href="#Backfire_Torch">
 				<linktext>Backfire Torch</linktext>
 			</link>
@@ -6295,7 +6281,7 @@
 			of fire set into the wind which burn outward at right angles to the
 			wind.</glossdef>
 		<related-links>
-			<link href="#Lateral_Fire" role="other" otherrole="synonym">
+			<link href="#Lateral_Fire">
 				<linktext>Lateral Fire</linktext>
 			</link>
 		</related-links>
@@ -7482,16 +7468,7 @@
 		<glossdef>Instrument for measuring the dependable range of distance at
 			which a standard smoke column can be detected by the unaided eye
 			under existing haze conditions.</glossdef>
-	</glossentry>
-	<glossentry id="Head_Fire">
-		<glossterm>Head Fire</glossterm>
-		<glossdef>A fire spreading or set to spread with the wind.</glossdef>
-		<related-links>
-			<link href="#Advancing_Fire" role="other" otherrole="synonym">
-				<linktext>Advancing Fire</linktext>
-			</link>
-		</related-links>
-	</glossentry>
+	</glossentry>	
 	<glossentry id="Head_Pressure">
 		<glossterm>Head Pressure</glossterm>
 		<glossdef>Pressure due to elevation of water. Equals 0.433 pounds per
@@ -7661,17 +7638,7 @@
 		<glossdef>Specially designed bucket carried by a helicopter like a sling
 			load and used for aerial delivery of water or fire
 			retardants.</glossdef>
-	</glossentry>
-	<glossentry id="Helicopter">
-		<glossterm>Helicopter</glossterm>
-		<glossdef>An aircraft that depends principally on the lift generated by
-			one or more rotors for its support in flight.</glossdef>
-		<related-links>
-			<link href="#Rotorcraft" role="other" otherrole="synonym">
-				<linktext>Rotorcraft</linktext>
-			</link>
-		</related-links>
-	</glossentry>
+	</glossentry>	
 	<glossentry id="Helicopter_Boss">
 		<glossterm>Helicopter Boss</glossterm>
 		<glossdef>An individual assigned to an agency helicopter to supervise
@@ -9078,7 +9045,7 @@
 			the main direction of fire travel. Also called: flanking
 			fire.</glossdef>
 		<related-links>
-			<link href="#Flank_Fire" role="other" otherrole="synonym">
+			<link href="#Flank_Fire">
 				<linktext>Flank Fire</linktext>
 			</link>
 		</related-links>
@@ -9419,24 +9386,16 @@
 		<glossdef>Ratio of the amount of water to the amount of dry plant
 			material in herbaceous plants, i.e., grasses and forbs.</glossdef>
 	</glossentry>
-	<glossentry id="Live_Line">
-		<glossterm>Live Line</glossterm>
-		<glossdef>Hose line filled with water under pressure and ready to
-			use.</glossdef>
-		<related-links>
-			<link href="#Charged_Line" role="other" otherrole="synonym">
-				<linktext>Charged Line</linktext>
-			</link>
-			<link href="#Live_Reel">
-				<linktext>Live Reel</linktext>
-			</link>
-		</related-links>
-	</glossentry>
 	<glossentry id="Live_Reel">
 		<glossterm>Live Reel</glossterm>
 		<glossdef>Hose line or reel on a fire engine, carried preconnected to
 			the pump, ready for use without making connections to pump or
 			attaching nozzle.</glossdef>
+		<related-links>
+			<link href="#Charged_Line">
+				<linktext>Charged Line</linktext>
+			</link>
+		</related-links>
 	</glossentry>
 	<glossentry id="Live_Run">
 		<glossterm>Live Run</glossterm>
@@ -10843,22 +10802,6 @@
 			</glossAlt>
 		</glossBody>
 	</glossentry>
-	<glossentry id="Off-road_Vehicle">
-		<glossterm>Off-road Vehicle</glossterm>
-		<glossdef>Any motorized vehicle designed for, or capable of,
-			cross-country travel on or immediately over land, water, sand, snow,
-			ice, marsh, swampland, or other terrain.</glossdef>
-		<glossBody>
-			<glossAlt>
-				<glossAcronym>ORV</glossAcronym>
-			</glossAlt>
-		</glossBody>
-		<related-links>
-			<link href="#All_Terrain_Vehicle" role="other" otherrole="synonym">
-				<linktext>All Terrain Vehicle</linktext>
-			</link>
-		</related-links>
-	</glossentry>
 	<glossentry id="Off-site_Colonizers">
 		<glossterm>Off-site Colonizers</glossterm>
 		<glossdef>None</glossdef>
@@ -11375,20 +11318,7 @@
 		<glossterm>Patrol Unit</glossterm>
 		<glossdef>Any light, mobile unit with limited pumping and water
 			capacity.</glossdef>
-	</glossentry>
-	<glossentry id="Pattern">
-		<glossterm>Pattern</glossterm>
-		<glossdef>The distribution of an aerially delivered retardant drop on
-			the target area in terms of its length, width, and momentum
-			(velocity x mass) as it approaches the ground. The latter determines
-			the relative coverage level of the fire retardant on fuel within the
-			pattern.</glossdef>
-		<related-links>
-			<link href="#Drop_Pattern" role="other" otherrole="synonym">
-				<linktext>Drop Pattern</linktext>
-			</link>
-		</related-links>
-	</glossentry>
+	</glossentry>	
 	<glossentry id="Pattern_Clusters">
 		<glossterm>Pattern Clusters</glossterm>
 		<glossdef>A group of indicators in a close proximity, of the same or
@@ -13127,13 +13057,16 @@
 	<glossentry id="Rotorcraft">
 		<glossterm>Rotorcraft</glossterm>
 		<glossdef>An aircraft that depends principally on the lift generated by
-			one or more rotors for its support in flight. Also called rotary
-			wing.</glossdef>
-		<related-links>
-			<link href="#Helicopter" role="other" otherrole="synonym">
-				<linktext>Helicopter</linktext>
-			</link>
-		</related-links>
+			one or more rotors for its support in flight.</glossdef>
+		<glossBody>
+			<glossAlt>
+				<glossSynonym>Helicopter</glossSynonym>
+			</glossAlt>
+			<glossAlt>
+				<glossSynonym>Rotary wing</glossSynonym>
+				<glossStatus value="altonly"/>
+			</glossAlt>
+		</glossBody>		
 	</glossentry>
 	<glossentry id="Rough">
 		<glossterm>Rough</glossterm>
@@ -13162,6 +13095,11 @@
 		<glossdef>Rapid advance of the head of a fire, characterized by a marked
 			transition in fireline intensity and rate of spread with respect to
 			that noted before and after the advance.</glossdef>
+		<related-links>
+			<link href="#Advancing_Fire">
+				<linktext>Advancing Fire</linktext>
+			</link>
+		</related-links>
 	</glossentry>
 	<glossentry id="Running_Fire">
 		<glossterm>Running Fire</glossterm>
@@ -14462,34 +14400,12 @@
 			that are routinely done in the operational environment.</glossdef>
 		<glossBody>
 			<glossAlt>
-				<glossAcronym>SOP</glossAcronym>
+				<glossSynonym>Standard Operational Procedure</glossSynonym>
 			</glossAlt>
-		</glossBody>
-		<related-links>
-			<link href="#Standard_Operational_Procedure" role="other"
-				otherrole="synonym">
-				<linktext>Standard Operational Procedure</linktext>
-			</link>
-		</related-links>
-	</glossentry>
-	<glossentry id="Standard_Operational_Procedure">
-		<glossterm>Standard Operational Procedure</glossterm>
-		<glossdef>Specific instructions clearly spelling out what is expected of
-			an individual every time they perform a given task. A standard
-			operational procedure can be used as a performance standard for
-			tasks that are routinely done in the operational
-			environment.</glossdef>
-		<glossBody>
 			<glossAlt>
 				<glossAcronym>SOP</glossAcronym>
 			</glossAlt>
-		</glossBody>
-		<related-links>
-			<link href="#Standard_Operating_Procedure" role="other"
-				otherrole="synonym">
-				<linktext>Standard Operating Procedure</linktext>
-			</link>
-		</related-links>
+		</glossBody>		
 	</glossentry>
 	<glossentry id="State_Forest">
 		<glossterm>State Forest</glossterm>
@@ -15323,18 +15239,7 @@
 				<linktext>Ten-hour Timelag Fuel Moisture</linktext>
 			</link>
 		</related-links>
-	</glossentry>
-	<glossentry id="Terra_Torch">
-		<glossterm>Terra Torch ®</glossterm>
-		<glossdef>Device for throwing a stream of flaming liquid, used to
-			facilitate rapid ignition during burn out operations on a wild fire
-			or during a prescribed fire operation.</glossdef>
-		<related-links>
-			<link href="#Flame_Thrower" role="other" otherrole="synonym">
-				<linktext>Flame Thrower</linktext>
-			</link>
-		</related-links>
-	</glossentry>
+	</glossentry>	
 	<glossentry id="Terrorism">
 		<glossterm>Terrorism</glossterm>
 		<glossdef>Any premeditated, unlawful act dangerous to human life or
