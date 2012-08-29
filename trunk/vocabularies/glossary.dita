@@ -7,7 +7,7 @@
 		<publisher>National Wildfire Coordinating Group</publisher>
 		<critdates>
 			<created date="2012-08-24"/>
-		</critdates>
+		</critdates>		
 		<resourceid id="http://firelab.org/cv/nwcg"/>
 	</prolog>
 	<glossentry id="Six_Minutes_for_Safety">
@@ -988,10 +988,14 @@
 		</related-links>
 	</glossentry>
 	<glossentry id="Aspirate_Foam">
-		<glossterm>Aspirate (Foam)</glossterm>
+		<glossterm>Aspirate</glossterm>
 		<glossdef>To draw in gases (or other substances); nozzle aspirating
 			systems draw air into the nozzle to mix with the foam
 			solution.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				working with foam.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Assessment">
 		<glossterm>Assessment</glossterm>
@@ -2444,20 +2448,28 @@
 			fuels.</glossdef>
 	</glossentry>
 	<glossentry id="Class_I_Areas_Air_Quality">
-		<glossterm>Class I Areas (Air Quality)</glossterm>
+		<glossterm>Class I Areas</glossterm>
 		<glossdef>Geographic areas designed by the Clean Air Act subject to the
 			most stringent restrictions on allowable increment of air quality
 			deterioration. Class I areas include Forest Service wildernesses and
 			nation memorial parks over 5,000 acres, National Parks exceeding
 			6,000 acres, international parks, as well as other designated
 			lands.</glossdef>
+		<glossBody>
+			<glossScopeNote>This term and definition apply within the context of
+				air quality.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Class_II_Areas_Air_Quality">
-		<glossterm>Class II Areas (Air Quality)</glossterm>
+		<glossterm>Class II Areas</glossterm>
 		<glossdef>All areas of the country not designated Class I, including
 			everything from non-Class I areas to urban areas. A greater amount
 			of air pollution can be added to these areas than Class
 			I.</glossdef>
+		<glossBody>
+			<glossScopeNote>This term and definition apply within the context of
+				air quality.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Class_of_Fire">
 		<glossterm>Class of Fire</glossterm>
@@ -2893,8 +2905,12 @@
 			damage will occur.</glossdef>
 	</glossentry>
 	<glossentry id="Consistency_Foam">
-		<glossterm>Consistency (Foam)</glossterm>
+		<glossterm>Consistency</glossterm>
 		<glossdef>Uniformity and size of bubbles.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				working with foam.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Constant_Danger">
 		<glossterm>Constant Danger</glossterm>
@@ -3573,10 +3589,14 @@
 			above it.</glossdef>
 	</glossentry>
 	<glossentry id="Density_Foam">
-		<glossterm>Density (Foam)</glossterm>
+		<glossterm>Density</glossterm>
 		<glossdef>The ratio of the original volume of the nonaerated foam
 			solution to the resultant volume of foam. The inverse of
 			expansion.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				working with foam.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Density_Altitude">
 		<glossterm>Density Altitude</glossterm>
@@ -4294,8 +4314,12 @@
 		</related-links>
 	</glossentry>
 	<glossentry id="Durability_Foam">
-		<glossterm>Durability (Foam)</glossterm>
+		<glossterm>Durability</glossterm>
 		<glossdef>The effective life span of foam bubbles.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				working with foam.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Duty_Week">
 		<glossterm>Duty Week</glossterm>
@@ -4615,11 +4639,15 @@
 			incident action and to incident personnel as needed.</glossdef>
 	</glossentry>
 	<glossentry id="Episode_Pollution">
-		<glossterm>Episode (Pollution)</glossterm>
+		<glossterm>Episode</glossterm>
 		<glossdef>A condition of poor contaminant dispersion which may result in
 			concentrations considered potentially harmful to health or welfare.
 			Episodes may also occur during periods of fairly good dispersion if
 			the source of air contaminants is extremely large.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				pollution.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Equilibrium_Moisture_Content">
 		<glossterm>Equilibrium Moisture Content</glossterm>
@@ -6633,10 +6661,14 @@
 			intentionally from an aircraft in flight.</glossdef>
 	</glossentry>
 	<glossentry id="Free_Flow_Hydraulics">
-		<glossterm>Free Flow (Hydraulics)</glossterm>
+		<glossterm>Free Flow</glossterm>
 		<glossdef>Maximum water flow rate a fire pump will attain when there are
 			no restrictions at the pump outlet or losses due to friction or
 			head.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				hydraulics.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Freezing_Rain">
 		<glossterm>Freezing Rain</glossterm>
@@ -7374,9 +7406,13 @@
 		<glossdef>Fireline constructed with hand tools.</glossdef>
 	</glossentry>
 	<glossentry id="Hangup_Tree_Falling">
-		<glossterm>Hangup (Tree Falling)</glossterm>
+		<glossterm>Hangup</glossterm>
 		<glossdef>A situation in which a tree is lodged in another, preventing
 			it from falling to the ground.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				a tree falling.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Hard_Suction_Hose">
 		<glossterm>Hard Suction Hose</glossterm>
@@ -9632,12 +9668,16 @@
 			and magnitude to warrant major disaster assistance.</glossdef>
 	</glossentry>
 	<glossentry id="Major_Repair_Aviation">
-		<glossterm>Major Repair (Aviation)</glossterm>
+		<glossterm>Major Repair</glossterm>
 		<glossdef>A repair (1) that, if improperly done, might appreciably
 			affect weight, balance, structural strength, or other qualities
 			affecting airworthiness or (2) that is not done according to
 			accepted practices or cannot be done by elementary
 			operations.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				aviation.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Major_Stationary_Sources">
 		<glossterm>Major Stationary Sources</glossterm>
@@ -10649,10 +10689,14 @@
 			motion).</glossdef>
 	</glossentry>
 	<glossentry id="Night_Aviation">
-		<glossterm>Night (Aviation)</glossterm>
+		<glossterm>Night</glossterm>
 		<glossdef>The time between the end of evening civil twilight and the
 			beginning of morning civil twilight, as published in the American
 			Air Almanac, converted to local time.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				aviation.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Nitrogen_Dioxide">
 		<glossterm>Nitrogen Dioxide</glossterm>
@@ -12402,18 +12446,30 @@
 		</related-links>
 	</glossentry>
 	<glossentry id="Rear_Of_a_Fire">
-		<glossterm>Rear (Of a Fire)</glossterm>
+		<glossterm>Rear</glossterm>
 		<glossdef>That portion of a fire spreading directly into the wind or
 			down slope.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				a fire.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Rear_Of_a_Fire1">
-		<glossterm>Rear (Of a Fire)</glossterm>
+		<glossterm>Rear</glossterm>
 		<glossdef>That portion of a fire edge opposite the head.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				a fire.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Rear_Of_a_Fire2">
-		<glossterm>Rear (Of a Fire)</glossterm>
+		<glossterm>Rear</glossterm>
 		<glossdef>Slowest spreading portion of a fire edge. Also called heel of
 			a fire.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				a fire.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Reasonably_Available_Control_Measures">
 		<glossterm>Reasonably Available Control Measures</glossterm>
@@ -13091,10 +13147,14 @@
 			operations. Also called running card.</glossdef>
 	</glossentry>
 	<glossentry id="Run_Of_a_Fire">
-		<glossterm>Run (Of a Fire)</glossterm>
+		<glossterm>Run</glossterm>
 		<glossdef>Rapid advance of the head of a fire, characterized by a marked
 			transition in fireline intensity and rate of spread with respect to
 			that noted before and after the advance.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				a fire.</glossScopeNote>
+		</glossBody>
 		<related-links>
 			<link href="#Advancing_Fire">
 				<linktext>Advancing Fire</linktext>
@@ -13991,9 +14051,13 @@
 			State Foresters and the Ad Council.</glossdef>
 	</glossentry>
 	<glossentry id="Smoking_As_a_Fire_Cause">
-		<glossterm>Smoking (As a Fire Cause)</glossterm>
+		<glossterm>Smoking</glossterm>
 		<glossdef>Wildfires caused by smokers from matches, lighters, tobacco,
 			or other smoking material.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				fire causes.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Smoldering_Combustion">
 		<glossterm>Smoldering Combustion</glossterm>
@@ -14066,7 +14130,7 @@
 			that a plane is approaching to drop retardant.</glossdef>
 	</glossentry>
 	<glossentry id="Sounding_Upper_Air_Sounding">
-		<glossterm>Sounding (Upper Air Sounding)</glossterm>
+		<glossterm>Upper Air Sounding</glossterm>
 		<glossdef>A sampling of upper air conditions made by means of
 			instruments and a small radio transmitter on a free balloon.
 			Automatic radio signals originated by action of weather instruments
@@ -14076,6 +14140,11 @@
 			points as the balloon rises are temperature, atmospheric moisture,
 			pressure, wind direction and speed. Similar soundings may be made
 			using fixed balloons or tethersondes.</glossdef>
+		<glossBody>
+			<glossAlt>
+				<glossSynonym>Sounding</glossSynonym>
+			</glossAlt>
+		</glossBody>
 		<related-links>
 			<link href="#Radiosonde">
 				<linktext>Radiosonde</linktext>
@@ -14673,9 +14742,13 @@
 			ground.</glossdef>
 	</glossentry>
 	<glossentry id="Structure_Vegetative">
-		<glossterm>Structure (Vegetative)</glossterm>
+		<glossterm>Structure</glossterm>
 		<glossdef>The arrangement of vegetation in terms of density, basal area,
 			cover, and vertical arrangement.</glossdef>
+		<glossBody>
+			<glossScopeNote>This definition is given within the context of
+				vegetation.</glossScopeNote>
+		</glossBody>
 	</glossentry>
 	<glossentry id="Structure_Fire">
 		<glossterm>Structure Fire</glossterm>
