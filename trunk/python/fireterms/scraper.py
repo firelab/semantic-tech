@@ -2,7 +2,7 @@
 import urllib, urlparse, re, BeautifulSoup, codecs
 from terms import Term, TermSet
 from skos import FragmentConceptFactory, TermsetConceptSchemeFactory
-from ditamodel import TermsetGlossGroupFactory, DefaultGlossEntryFactory
+#from ditamodel import TermsetGlossGroupFactory, DefaultGlossEntryFactory
 
 labelproc = re.compile(r'^(?P<label>[^()]+[A-Za-z0-9])\s*(\((?P<acronym>.+)\))?$')
 htmlcondense = re.compile(r'\s+')
@@ -118,8 +118,10 @@ def char_range(c1, c2):
 
 def parseGlossary(baseUrl) : 
 	terms = None
-	for page in char_range('a', 'w') : 
-		url = (baseUrl + "/%c.htm") % page
+	pages = list(char_range('a', 'w'))
+	pages.append('z')
+	for page in pages : 
+		url = (baseUrl + "/%c") % page
 		print "Parsing %s" % url
 		terms = parsePage(url, terms)
 	return terms
@@ -129,10 +131,10 @@ def convertGlossaryToSKOS(baseUrl, terms) :
 	csf = TermsetConceptSchemeFactory(cf)
 	return csf.newConceptScheme(terms, baseUrl)
 
-def convertGlossaryToDita(baseUrl, name, terms) : 
-	cf = DefaultGlossEntryFactory()
-	csf = TermsetGlossGroupFactory(cf)
-	return csf.newGlossGroup(terms, baseUrl, name)
+#def convertGlossaryToDita(baseUrl, name, terms) : 
+#	cf = DefaultGlossEntryFactory()
+#	csf = TermsetGlossGroupFactory(cf)
+#	return csf.newGlossGroup(terms, baseUrl, name)
 
 
 def termsout(file, terms) : 
