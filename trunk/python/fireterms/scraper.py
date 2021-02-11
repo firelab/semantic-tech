@@ -42,7 +42,8 @@ def parseEntry(tag) :
     
     
     description = tag.next_sibling
-    definition = description.li.find(text=True, recursive=False)
+    definition_tag = description.li
+    definition = definition_tag.find(text=True, recursive=False)
     source_text = None
     source_link = None
     see_also = None
@@ -61,7 +62,7 @@ def parseEntry(tag) :
         
         # if there's a subordinate ul element (see also or synonyms)
         # then get rid of it out of the source text.
-        other_stuff = description.li.ul
+        other_stuff = definition_tag.ul
         if other_stuff is not None :        
             source_text = source_text[:-(len(other_stuff.text)+1)]
         
@@ -73,11 +74,11 @@ def parseEntry(tag) :
         definition = definition[:dpos]
         
     # check to see if there's "more"
-    extras = description.li.li
+    extras = definition_tag.li
     while extras is not None: 
         see_also_pos = extras.text.find('see also')
         if see_also_pos != -1 : 
-            see_also_text = extras.text[11:].strip()
+            see_also_text = extras.text[9:].strip()
             see_also = see_also_text.split(';')
         
         synonym_pos = extras.text.find('synonym')
