@@ -54,8 +54,11 @@ def parseEntry(tag) :
        # eat up the subordinant list full of "extras", parsed out below.
 	    definition = definition_tag.find(text=True, recursive=False)
 	    # Sometimes (rarely) the definition is encapsulated by a <p> Tag.
-	    if definition is None :
+	    if definition is None and definition_tag.p is not None :
 	        definition = definition_tag.p.find(text=True, recursive=False)
+	    # Sometimes (rarely) the definition is encapsulated by an <i> Tag.
+	    if definition is None and definition_tag.i is not None :
+	        definition = definition_tag.i.find(text=True, recursive=False)
 	        
 	    see_also = []
 	    synonym = []
@@ -86,12 +89,21 @@ def parseEntry(tag) :
 	        
 	    # check to see if there's "more"
 	    extras = definition_tag.li
-	    while extras is not None: 
+	    while extras is not None:
+	    	  # references flagged with "see also"
 	        see_also_pos = extras.text.find('see also')
 	        if see_also_pos != -1 : 
 	            see_also_text = extras.text[9:].strip()
 	            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
 	            see_also = see_also + see_also_terms
+	        
+	        # references flagged with "See"    
+	        see_also_pos = extras.text.find('See')
+	        if see_also_pos != -1 : 
+	            see_also_text = extras.text[3:].strip()
+	            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
+	            see_also = see_also + see_also_terms
+	        
 	        
 	        synonym_pos = extras.text.find('synonym')
 	        if synonym_pos != -1 : 
