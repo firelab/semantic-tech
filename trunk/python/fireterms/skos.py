@@ -315,7 +315,6 @@ class TermsetConceptSchemeFactory (object) :
 					concept = self._conceptFactory.newConcept(tgtUri)
 					concept.addLabel(origConcept.getPrefLabel())
 					thisdef = Definition(defs[suffix])
-					thisscope = ScopeNote(defs[suffix])
 					origConcept.removeNote(thisdef)
 					origConcept.removeNote(thisscope)
 					concept.addNote(thisdef)
