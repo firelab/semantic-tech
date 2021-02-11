@@ -1,5 +1,5 @@
 
-import urllib2, urlparse, re, codecs
+import urllib2, urllib, urlparse, re, codecs
 from bs4 import BeautifulSoup
 from terms import Term, TermSet
 from skos import FragmentConceptFactory, TermsetConceptSchemeFactory
@@ -29,6 +29,24 @@ def parseNameForAbbrev(term_name) :
 		ab=ab[1:-1]
 	return term_name, ab
 
+
+def generateKey(name) :
+	 """Spaces make some RDF parsers choke and may not be valid identifiers.
+	 Change spaces to underscores and perform URL friendly escaping.
+	 There's also formatting and special characters like registered trademarks.
+	 """
+	 name = unicode(name)
+	 name = name.replace(u'/', u'_')
+	 name = name.replace(u'\xa0',u'_')
+	 name = name.replace(u'\u2019', u'_')
+	 name = name.replace(u'\u201c', u'_')
+	 name = name.replace(u'\u201d', u'_')
+	 name = name.replace(u'\xae',u'_')
+	 name = name.replace(u' ',u'_')
+	 print name
+	 return urllib.quote(name)
+	 
+	 
 def parseEntry(tag) : 
     """Given the first <td> in the row containing a term and a definition, 
     parse out the term, the definition, and the various optional attributes
@@ -94,20 +112,20 @@ def parseEntry(tag) :
 	        see_also_pos = extras.text.lower().find('see also')
 	        if see_also_pos != -1 : 
 	            see_also_text = extras.text[9:].strip()
-	            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
+	            see_also_terms = [ generateKey(s.strip()) for s in see_also_text.split(';') ]
 	            see_also = see_also + see_also_terms
 	        else:
 		        # references flagged with "See"    
 		        see_also_pos = extras.text.find('See')
 		        if see_also_pos != -1 : 
 		            see_also_text = extras.text[3:].strip()
-		            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
+		            see_also_terms = [ generateKey(s.strip()) for s in see_also_text.split(';') ]
 		            see_also = see_also + see_also_terms
 	        
 	        
 	        synonym_pos = extras.text.find('synonym')
 	        if synonym_pos != -1 : 
-	            synonym.append(extras.text[9:].strip())
+	            synonym.append(generateKey(extras.text[9:].strip()))
 	        
 	        extension_pos = extras.text.find('Definition Extension')
 	        if extension_pos != -1 :
@@ -131,7 +149,7 @@ def parseEntry(tag) :
     if not synonym_list :
     	 synonym_list = None        
     
-    return Term(term_name, term_name, def_list, see_also_list, synonym_list, source_text=source_text, source_link=source_link, 
+    return Term(generateKey(term_name), term_name, def_list, see_also_list, synonym_list, source_text=source_text, source_link=source_link, 
                 abbrev=abbreviation)
          
    
