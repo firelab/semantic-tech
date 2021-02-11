@@ -50,7 +50,13 @@ def parseEntry(tag) :
     source_link = None
 
     while definition_tag is not None: 
+       # Get the definition text. We don't want recursion because that will
+       # eat up the subordinant list full of "extras", parsed out below.
 	    definition = definition_tag.find(text=True, recursive=False)
+	    # Sometimes (rarely) the definition is encapsulated by a <p> Tag.
+	    if definition is None :
+	        definition = definition_tag.p.find(text=True, recursive=False)
+	        
 	    see_also = []
 	    synonym = []
 	    
@@ -90,10 +96,18 @@ def parseEntry(tag) :
 	        synonym_pos = extras.text.find('synonym')
 	        if synonym_pos != -1 : 
 	            synonym.append(extras.text[9:].strip())
+	        
+	        extension_pos = extras.text.find('Definition Extension')
+	        if extension_pos != -1 :
+	            definition = definition + " " + extras.text.strip()
+
 	        extras = extras.next_sibling
 	    
-	    # accumulate the "features" of this definition into the term's properties    
-	    def_list.append(definition.strip())
+	    # accumulate the "features" of this definition into the term's properties 
+	    if definition is not None :    
+	        def_list.append(definition.strip())
+	    else :
+	        print "%s lacks a definition..." % term_name
 	    synonym_list = synonym_list + synonym
 	    see_also_list = see_also_list + see_also	        
 	        
