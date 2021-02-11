@@ -1,11 +1,11 @@
 
-import urllib, urlparse, re, BeautifulSoup, codecs
+import urllib2, urlparse, re, codecs
+from bs4 import BeautifulSoup
 from terms import Term, TermSet
 from skos import FragmentConceptFactory, TermsetConceptSchemeFactory
 #from ditamodel import TermsetGlossGroupFactory, DefaultGlossEntryFactory
 
-labelproc = re.compile(r'^(?P<label>[^()]+[A-Za-z0-9])\s*(\((?P<acronym>.+)\))?$')
-htmlcondense = re.compile(r'\s+')
+abbrev = re.compile(r'^.+(?P<abbrev>\(.+\))$')
 		
 def prepString(rawstring) : 
 	trimmed = rawstring.strip()
@@ -17,99 +17,111 @@ def nextSiblingTag(tag) :
 		tag = tag.nextSibling
 	return tag
 	
-	
+def parseNameForAbbrev(term_name) :
+	ab = None
+	m = abbrev.match(term_name)
+	if m is not None : 
+		ab = m.group('abbrev')
+		# remove abbreviation from the term name
+		term_name = term_name[:-len(ab)].strip()     
 
-def parseEntry(tag) :
-	if nextSiblingTag(tag) == None or tag['class'] != u'term' or len(tag.contents)==0 :
- 
-		return (nextSiblingTag(tag), None)
+		#now strip out the parens
+		ab=ab[1:-1]
+	return term_name, ab
 
-	# the "key" is always the name attribute of the child's anchor
-	key = tag.a['name']
-	englishLabel = None
-	englishDefs = []
-	refs = [] 
-	syns = [] 
-	acronym = None
+def parseEntry(tag) : 
+    """Given the first <td> in the row containing a term and a definition, 
+    parse out the term, the definition, and the various optional attributes
+    (synonyms, sources, see alsos, etc.) from the definition."""	
+    
+    # parse out the term name. Check for abbreviations
+    term_name = tag.a.text.strip()
+    term_name, abbreviation = parseNameForAbbrev(term_name) 
+    if abbreviation is not None: 
+        abbreviation = [abbreviation] 
+    
+    
+    description = tag.next_sibling
+    definition = description.li.find(text=True, recursive=False)
+    source_text = None
+    source_link = None
+    see_also = None
+    synonym = None
+    
+    # check to see if the description contains a Source
+    desc_html = str(description)
+    pos  = desc_html.rfind('Source:')
+    if pos != -1 : 
+   	  # If there's a source, remove the "source" bits from the description 
+        source_text = desc_html[pos:]
+        source_soup = BeautifulSoup(source_text, 'html.parser')
+        
+        
+        source_text = source_soup.text[7:].strip()
+        
+        # if there's a subordinate ul element (see also or synonyms)
+        # then get rid of it out of the source text.
+        other_stuff = description.li.ul
+        if other_stuff is not None :        
+            source_text = source_text[:-(len(other_stuff.text)+1)]
+        
+        if source_soup.a is not None : 
+            source_link = source_soup.a['href']
+        
+        #chop out the source bits
+        dpos = definition.rfind('Source')
+        definition = definition[:dpos]
+        
+    # check to see if there's "more"
+    extras = description.li.li
+    while extras is not None: 
+        see_also_pos = extras.text.find('see also')
+        if see_also_pos != -1 : 
+            see_also_text = extras.text[11:].strip()
+            see_also = see_also_text.split(';')
+        
+        synonym_pos = extras.text.find('synonym')
+        if synonym_pos != -1 : 
+            synonym = (extras.text[9:].strip(), )
+        extras = extras.next_sibling
+    
+             
+    return Term(term_name, term_name, [definition], see_also, synonym, source_text=source_text, source_link=source_link, 
+                abbrev=abbreviation)
+         
+   
+def _parsePage(handle, terms=None) :
+	soup = BeautifulSoup(handle, 'html.parser')
 
-	# If the next tag is another paragraph, its contents are the English 
-	# representation of the term.
-	if (nextSiblingTag(tag).name == u'p') and (nextSiblingTag(tag)['class']==u'term') : 
-		tag = nextSiblingTag(tag)
-		englishLabel = tag.contents[len(tag.contents)-1].strip()
-	else : 
-		# Otherwise, the name comes from the last element of the contents
-		englishLabel = tag.contents[len(tag.contents)-1].strip()
-	m = labelproc.match(englishLabel)
-	if m != None : 
-		englishLabel = m.group('label')
-		acronym = m.group('acronym')
-	else :
-		print "Failed to parse '%s'." % englishLabel
-
-	# advance to the definition list
-	while not (((tag.name == u'ol') and (tag['class'] == u'definition')) or \
-	           ((tag.name == u'p') and (tag['class'] == u'reference'))):
-		tag = nextSiblingTag(tag)
-	
-	# Now comes the list of definitions
-	if tag['class'] == u'definition' :
-		for defTag in tag.contents : 
-			if (type(defTag)==BeautifulSoup.Tag) and (defTag.name == u'li') and (defTag['class'] == u'definition') : 
-				if (len(defTag.contents) == 1) : 
-					englishDefs.append(prepString(defTag.string))
-				else : 
-					strings = [ item for item in defTag.contents if type(item)==BeautifulSoup.NavigableString ]
-					englishDefs.append(prepString(' '.join(strings)))
-		tag = nextSiblingTag(tag)
-				
-
-	# Now are some optional references and synonyms
-	while (tag != None) and (tag.name == u'p') and (tag['class'] == u'reference') : 
-		if tag.em.string.startswith(u'synonym') or \
-		   tag.em.string.startswith(u'see:') : 
-			for refTag in tag.contents :
-				if (type(refTag) == BeautifulSoup.Tag and refTag.name == u'a') : 
-					refurl =  urlparse.urlparse(refTag['href'])
-					syns.append(refurl.fragment)
-					if tag.em.string.startswith(u'see:') : 
-						print "%s -> %s" % (englishLabel, refurl.fragment)
-		if tag.em.string.startswith(u'see also') : 
-			for refTag in tag.contents : 
-				if (type(refTag) == BeautifulSoup.Tag and refTag.name == u'a') : 
-					refurl =  urlparse.urlparse(refTag['href'])
-					refs.append(refurl.fragment)
-		tag = nextSiblingTag(tag)
-		
-	if acronym == None : 
-		term = Term(key, englishLabel, englishDefs, refs, syns)
-	else : 
-		term = Term(key, englishLabel, englishDefs, refs, syns, [acronym]) 
-
-	return (tag, term)
-
-
-	
-def parsePage(url, terms=None) : 
-	f = urllib.urlopen(url)
-	b = BeautifulSoup.BeautifulSoup(f, convertEntities=BeautifulSoup.BeautifulSoup.HTML_ENTITIES)
-	if terms == None : 
+   # If we need a place to store the terms, make it.
+	if terms is None : 
 		terms = TermSet()
-
-	divtag = b.find('div')
-	while divtag != None : 
-		tag = divtag.find('p', 'term')
-		while tag != None : 
-			dummy, term = parseEntry(tag)
-			if (term != None) : 
-				terms.addTerm(term)
-			if tag != None : 
-				tag = tag.findNextSibling('p', {'class':'term'})
-#			while (tag != None) and not ((tag.name == u'p') and (tag['class'] == u'term')) :
-#				tag = nextSiblingTag(tag)
-		divtag = divtag.findNextSibling('div')
-
+       
+   # find all the definitions
+	definitions = soup.find_all('td',class_='views-field-name')
+   
+   # parse all the definitions.
+	for d in definitions: 
+		this_term = parseEntry(d)
+		terms.addTerm(this_term)
+   
 	return terms
+    
+def parsePage(url, terms=None) :
+	f= urllib2.urlopen(url) 
+	retval = _parsePage(f, terms)
+	f.close()
+	return retval
+	
+	
+def parseFile(fname, terms=None) :
+	with open(fname) as f :
+		retval = _parsePage(f, terms)
+	return retval
+
+
+
+	
 
 def char_range(c1, c2):
     """Generates the characters from `c1` to `c2`, inclusive."""
@@ -158,6 +170,7 @@ def rdfout(file, cs) :
 	f.write(u'<rdf:RDF \n') 
 	f.write(u'   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n')
 	f.write(u'   xmlns:skos="http://www.w3.org/2004/02/skos/core#">\n')
+	f.write(u'   xmlns:dct="http://purl.org/dc/terms/">\n')
 
 	# sort the concepts by key
 	cs_keys = list(cs.getScheme().keys())

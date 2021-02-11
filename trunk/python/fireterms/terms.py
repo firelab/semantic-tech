@@ -5,7 +5,7 @@ class Definition (str) :
 		return self._partOfSpeech
 
 class Term (object) : 
-	def __init__(self, key, label, defs, refs, syns, acronyms=None, abbrev=None, shortForms=None) : 
+	def __init__(self, key, label, defs, refs, syns, acronyms=None, abbrev=None, shortForms=None, source_text=None, source_link=None) : 
 		self._key = key
 		self._englishLabel = label
 		self._englishDefs = defs
@@ -14,6 +14,8 @@ class Term (object) :
 		self._abbrev = [] 
 		self._acronyms = []
 		self._shortForms = [] 
+		self._source_text = source_text
+		self._source_link = source_link
 		if abbrev != None : 
 			self._abbrev = abbrev
 		if acronyms != None : 
@@ -37,6 +39,19 @@ class Term (object) :
 		return self._acronyms
 	def getShortForms(self) : 
 		return self._shortForms
+	def getSourceText(self): 
+		return self._source_text
+	def getSourceLink(self) :
+		return self._source_link
+	def hasSource(self) : 
+		return self._source_text is not None
+	def hasReferences(self) : 
+		return self._references is not None
+	def hasSynonyms(self) : 
+		return self._synonyms is not None
+	def hasAbbreviations(self) :
+		return len(self._abbrev) != 0
+		    
 
 
 class TermSet (object) : 
@@ -47,12 +62,14 @@ class TermSet (object) :
 
 	def addTerm(self, term) : 
 		self._terms[term.getKey()] = term
-		for ref in term.getReferences() : 
-			if not (ref in self._terms) : 
-				self._unresolvedRefs.add(ref)
-		for syn in term.getSynonyms() : 
-			if not (syn in self._terms) : 
-				self._unresolvedSyns.add(syn)
+		if term.hasReferences() :
+			for ref in term.getReferences() : 
+				if not (ref in self._terms) : 
+					self._unresolvedRefs.add(ref)
+		if term.hasSynonyms() :
+			for syn in term.getSynonyms() : 
+				if not (syn in self._terms) : 
+					self._unresolvedSyns.add(syn)
 
 		if term.getKey() in self._unresolvedRefs : 
 			self._unresolvedRefs.remove(term.getKey())
@@ -87,6 +104,6 @@ class TermSet (object) :
 	def getTermsWithSynonyms(self) : 
 		syns = [ ]
 		for item in self.getTermSet() : 
-			if len(item.getSynonyms()) > 0 : 
+			if item.hasSynonyms()  : 
 				syns.append(item)
 		return syns

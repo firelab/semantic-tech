@@ -97,6 +97,7 @@ class Concept (object) :
 		self._labels = set() 
 		self._relationships = []
 		self._prefLabelLang = set()
+		self._source = []
 	def getURI(self): 
 		return self._uri
 	def addNote(self, note) : 
@@ -128,6 +129,10 @@ class Concept (object) :
 		rev = fwd.getInverse(self)
 		self._relationships.append(fwd) 
 		target._relationships.append(rev)
+	def addSource(self, source) :
+		self._source.append(source)
+	def hasSource(self) :
+		return len(self._source) != 0
 	def merge(self, other) : 
 		if self == other : 
 			return
@@ -149,6 +154,9 @@ class Concept (object) :
 			info.append(prop.ustr())
 		for prop in self._relationships : 
 			info.append(prop.ustr())
+		if self.hasSource() :
+			for s in self._source :
+				info.append(u'<dct:source>%s</dct:source>'%s)
 		info.append(u'</skos:Concept>')
 		return '\n'.join(info)
 			
@@ -238,7 +246,6 @@ class ConceptTermMap (object) :
 			for term in relatedTerms : 
 				self.unmapConcept2Term(former, term) 
 				self.mapConcept2Term(current, term)
-				del(self._concept2term[former])
 		
 	def getTerms(self, concept) : 
 		retval = None
@@ -268,7 +275,7 @@ class TermsetConceptSchemeFactory (object) :
 		mapping = ConceptTermMap() 
 		self._createConcepts(termset, mapping, cs)
 		self._splitConcepts(termset, mapping, cs)
-		self._mergeConcepts(termset, mapping, cs)
+		#self._mergeConcepts(termset, mapping, cs)
 		self._addRelationships(termset, mapping, cs)
 		return cs 
 		
@@ -278,13 +285,18 @@ class TermsetConceptSchemeFactory (object) :
 		for term in td.values() : 
 			termkey = term.getKey()
 			concept = self._conceptFactory.newConcept(termkey)
-			if len(term.getDefinitions()) == 0 : 
-				concept.addLabel(AltLabel(term.getLabel()))
-			else:
-				concept.addLabel(PrefLabel(term.getLabel()))
+			concept.addLabel(PrefLabel(term.getLabel()))
+			if term.hasSynonyms() :
+				for syn in term.getSynonyms() :
+					concept.addLabel(AltLabel(syn))
+			if term.hasAbbreviations() :
+				for a in term.getAbbreviations() :
+					concept.addLabel(AltLabel(a))
+			if term.hasSource() :
+				concept.addSource(term.getSourceText())
+				concept.addSource(term.getSourceLink())
 			for sense in term.getDefinitions() : 
 				concept.addNote(Definition(sense))
-				concept.addNote(ScopeNote(sense))
 			
 			mapping.mapTerm2Concept(termkey, concept.getURI())
 			cs.addConcept(concept)
@@ -316,7 +328,7 @@ class TermsetConceptSchemeFactory (object) :
 		"""Phase 3: For each "synonymous term", merge the associated concepts."""
 		removedUris = []
 		for term in termset.getTermDictionary().values() : 
-			if len(term.getSynonyms()) > 0 : 
+			if term.hasSynonyms() : 
 				termkey = term.getKey()
 				termconceptURIs = mapping.getConcepts(termkey)
 				for synkey in term.getSynonyms(): 
@@ -350,7 +362,7 @@ class TermsetConceptSchemeFactory (object) :
 	def _addRelationships(self, termset, mapping, cs) : 
 		"""Phase 4: Add "related" relationships"""
 		for term in termset.getTermDictionary().values() : 
-			if len(term.getReferences()) > 0 : 
+			if term.hasReferences() : 
 				termkey = term.getKey()
 				termconceptURIs = list(mapping.getConcepts(termkey))
 				for refkey in term.getReferences() : 
