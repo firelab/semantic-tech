@@ -96,13 +96,13 @@ def parseEntry(tag) :
 	            see_also_text = extras.text[9:].strip()
 	            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
 	            see_also = see_also + see_also_terms
-	        
-	        # references flagged with "See"    
-	        see_also_pos = extras.text.find('See')
-	        if see_also_pos != -1 : 
-	            see_also_text = extras.text[3:].strip()
-	            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
-	            see_also = see_also + see_also_terms
+	        else:
+		        # references flagged with "See"    
+		        see_also_pos = extras.text.find('See')
+		        if see_also_pos != -1 : 
+		            see_also_text = extras.text[3:].strip()
+		            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
+		            see_also = see_also + see_also_terms
 	        
 	        
 	        synonym_pos = extras.text.find('synonym')
