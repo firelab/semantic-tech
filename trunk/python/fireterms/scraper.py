@@ -40,54 +40,72 @@ def parseEntry(tag) :
     if abbreviation is not None: 
         abbreviation = [abbreviation] 
     
-    
+    # start parsing (possibly multiple) definitions
     description = tag.next_sibling
     definition_tag = description.li
-    definition = definition_tag.find(text=True, recursive=False)
+    def_list =[]
+    see_also_list = []
+    synonym_list = []
     source_text = None
     source_link = None
-    see_also = None
-    synonym = None
+
+    while definition_tag is not None: 
+	    definition = definition_tag.find(text=True, recursive=False)
+	    see_also = []
+	    synonym = []
+	    
+	    # check to see if the description contains a Source
+	    desc_html = str(description)
+	    pos  = desc_html.rfind('Source:')
+	    if pos != -1 : 
+	   	  # If there's a source, remove the "source" bits from the description 
+	        source_text = desc_html[pos:]
+	        source_soup = BeautifulSoup(source_text, 'html.parser')
+	        
+	        
+	        source_text = source_soup.text[7:].strip()
+	        
+	        # if there's a subordinate ul element (see also or synonyms)
+	        # then get rid of it out of the source text.
+	        other_stuff = definition_tag.ul
+	        if other_stuff is not None :        
+	            source_text = source_text[:-(len(other_stuff.text)+1)]
+	        
+	        if source_soup.a is not None : 
+	            source_link = source_soup.a['href']
+	        
+	        #chop out the source bits
+	        dpos = definition.rfind('Source')
+	        definition = definition[:dpos]
+	        
+	    # check to see if there's "more"
+	    extras = definition_tag.li
+	    while extras is not None: 
+	        see_also_pos = extras.text.find('see also')
+	        if see_also_pos != -1 : 
+	            see_also_text = extras.text[9:].strip()
+	            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
+	            see_also = see_also + see_also_terms
+	        
+	        synonym_pos = extras.text.find('synonym')
+	        if synonym_pos != -1 : 
+	            synonym.append(extras.text[9:].strip())
+	        extras = extras.next_sibling
+	    
+	    # accumulate the "features" of this definition into the term's properties    
+	    def_list.append(definition.strip())
+	    synonym_list = synonym_list + synonym
+	    see_also_list = see_also_list + see_also	        
+	        
+	    definition_tag = definition_tag.next_sibling
     
-    # check to see if the description contains a Source
-    desc_html = str(description)
-    pos  = desc_html.rfind('Source:')
-    if pos != -1 : 
-   	  # If there's a source, remove the "source" bits from the description 
-        source_text = desc_html[pos:]
-        source_soup = BeautifulSoup(source_text, 'html.parser')
-        
-        
-        source_text = source_soup.text[7:].strip()
-        
-        # if there's a subordinate ul element (see also or synonyms)
-        # then get rid of it out of the source text.
-        other_stuff = definition_tag.ul
-        if other_stuff is not None :        
-            source_text = source_text[:-(len(other_stuff.text)+1)]
-        
-        if source_soup.a is not None : 
-            source_link = source_soup.a['href']
-        
-        #chop out the source bits
-        dpos = definition.rfind('Source')
-        definition = definition[:dpos]
-        
-    # check to see if there's "more"
-    extras = definition_tag.li
-    while extras is not None: 
-        see_also_pos = extras.text.find('see also')
-        if see_also_pos != -1 : 
-            see_also_text = extras.text[9:].strip()
-            see_also = see_also_text.split(';')
-        
-        synonym_pos = extras.text.find('synonym')
-        if synonym_pos != -1 : 
-            synonym = (extras.text[9:].strip(), )
-        extras = extras.next_sibling
+    # If we don't have any of these things, set them to None
+    if not see_also_list: 
+       see_also_list = None
+    if not synonym_list :
+    	 synonym_list = None        
     
-             
-    return Term(term_name, term_name, [definition], see_also, synonym, source_text=source_text, source_link=source_link, 
+    return Term(term_name, term_name, def_list, see_also_list, synonym_list, source_text=source_text, source_link=source_link, 
                 abbrev=abbreviation)
          
    
