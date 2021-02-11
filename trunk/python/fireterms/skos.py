@@ -316,9 +316,7 @@ class TermsetConceptSchemeFactory (object) :
 					concept.addLabel(origConcept.getPrefLabel())
 					thisdef = Definition(defs[suffix])
 					origConcept.removeNote(thisdef)
-					origConcept.removeNote(thisscope)
 					concept.addNote(thisdef)
-					concept.addNote(thisscope)
 					
 					mapping.mapTerm2Concept(term.getKey(), concept.getURI())
 					cs.addConcept(concept)

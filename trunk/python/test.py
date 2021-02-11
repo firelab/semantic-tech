@@ -17,18 +17,20 @@ tkeys.sort()
 
 for tkey in tkeys : 
 	term = td[tkey]
-	temp = set(term.getReferences())
-	if not urefs.isdisjoint(temp) : 
-		unknown = urefs.intersection(temp)
-		for i in unknown : 
-			print "%s references unknown term '%s'" % (term.getLabel(), i)
+	if term.hasReferences() :    
+		temp = set(term.getReferences())
+		if not urefs.isdisjoint(temp) : 
+			unknown = urefs.intersection(temp)
+			for i in unknown : 
+				print "%s references unknown term '%s'" % (term.getLabel(), i)
 for tkey in tkeys : 
 	term = td[tkey]
-	temp = set(term.getSynonyms())
-	if not usyns.isdisjoint(temp) : 
-		unknown = usyns.intersection(temp)
-		for i in unknown : 
-			print "%s synonymous with unknown term '%s'" % (term.getLabel(), i)
+	if term.hasSynonyms() :
+		temp = set(term.getSynonyms())
+		if not usyns.isdisjoint(temp) : 
+			unknown = usyns.intersection(temp)
+			for i in unknown : 
+				print "%s synonymous with unknown term '%s'" % (term.getLabel(), i)
 		
 	
 

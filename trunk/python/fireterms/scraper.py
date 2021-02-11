@@ -90,8 +90,8 @@ def parseEntry(tag) :
 	    # check to see if there's "more"
 	    extras = definition_tag.li
 	    while extras is not None:
-	    	  # references flagged with "see also"
-	        see_also_pos = extras.text.find('see also')
+	    	  # references flagged with "see also" sometimes "See Also" sometimes "See also"
+	        see_also_pos = extras.text.lower().find('see also')
 	        if see_also_pos != -1 : 
 	            see_also_text = extras.text[9:].strip()
 	            see_also_terms = [ s.strip() for s in see_also_text.split(';') ]
@@ -177,6 +177,7 @@ def parseGlossary(baseUrl) :
 	terms = None
 	pages = list(char_range('a', 'w'))
 	pages.append('z')
+	pages.append('6')
 	for page in pages : 
 		url = (baseUrl + "/%c") % page
 		print "Parsing %s" % url
