@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF 
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
    xmlns:dct="http://purl.org/dc/terms/">
 <skos:Concept rdf:about="https://www.nwcg.gov/glossary/a-z/sort/#6_Minutes_for_Safety">
 <skos:definition xml:lang="en">A daily safety briefing for wildland fire that focuses on high risk events found within a firefighter's scope of work that are performed on an infrequent basis. Also know as Six Minutes for Safety.  View the Six Minutes for Safety website at</skos:definition>

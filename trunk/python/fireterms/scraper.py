@@ -233,7 +233,7 @@ def rdfout(file, cs) :
 	f.write(u'<?xml version="1.0" encoding="UTF-8"?>\n')
 	f.write(u'<rdf:RDF \n') 
 	f.write(u'   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"\n')
-	f.write(u'   xmlns:skos="http://www.w3.org/2004/02/skos/core#">\n')
+	f.write(u'   xmlns:skos="http://www.w3.org/2004/02/skos/core#"\n')
 	f.write(u'   xmlns:dct="http://purl.org/dc/terms/">\n')
 
 	# sort the concepts by key
