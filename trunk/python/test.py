@@ -7,7 +7,7 @@ terms = scraper.parseGlossary('https://www.nwcg.gov/glossary/a-z/sort/')
 #terms = pickle.load(gfile)
 #gfile.close()
 
-cs = scraper.convertGlossaryToSKOS('https://www.nwcg.gov/glossary/a-z/sort/', terms)
+cs = scraper.convertGlossaryToSKOS('https://www.nwcg.gov/glossary/a-z/sort', terms)
 #print "There are %d unresolved references and %d unresolved synonyms." % (len(terms.getUnresolvedRefs()), len(terms.getUnresolvedSyns()))
 urefs = set(terms.getUnresolvedRefs() )
 usyns = set(terms.getUnresolvedSyns() )
