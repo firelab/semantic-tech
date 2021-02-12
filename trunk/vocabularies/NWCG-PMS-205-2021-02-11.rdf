@@ -8761,7 +8761,7 @@
 <skos:prefLabel xml:lang="en">Use Level</skos:prefLabel>
 </skos:Concept>
 <skos:Concept rdf:about="https://www.nwcg.gov/glossary/a-z/sort#Use_of_Wildland_Fire">
-<skos:definition xml:lang="en">Management of wildfire or prescribed fire to meet resource objectives specified in land/resource management plans. &nbsp</skos:definition>
+<skos:definition xml:lang="en">Management of wildfire or prescribed fire to meet resource objectives specified in land/resource management plans.</skos:definition>
 <skos:prefLabel xml:lang="en">Use of Wildland Fire</skos:prefLabel>
 <dct:source>2009 Guidance for Implementation Federal Wildland Fire Management Policy and Fire Management Board Memorandum 19-004a.</dct:source>
 <dct:source>//www.nwcg.gov/sites/default/files/docs/eb-fmb-m-19-004a.pdf</dct:source>
